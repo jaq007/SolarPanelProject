@@ -1,0 +1,39 @@
+name: Solaris Energy Build
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Validate Solaris Energy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Read project version
+        id: version
+        run: echo "VERSION=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+
+      - name: Display build information
+        run: |
+          echo "======================================"
+          echo " Solaris Energy"
+          echo " Version: ${{ steps.version.outputs.VERSION }}"
+          echo " Build: ${{ github.run_number }}"
+          echo "======================================"
+
+      - name: Validate required files
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f app.js
+          test -f VERSION
+
+      - name: Build completed
+        run: |
+          echo "Solaris Energy validation completed successfully."
+          echo "Version ${{ steps.version.outputs.VERSION }} - Build ${{ github.run_number }}"
