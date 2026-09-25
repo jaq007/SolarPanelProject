@@ -16,13 +16,16 @@ jobs:
 
       - name: Read project version
         id: version
-        run: echo "VERSION=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+        run: |
+          VERSION=$(cat VERSION)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Project version detected: $VERSION"
 
       - name: Display build information
         run: |
           echo "======================================"
           echo " Solaris Energy"
-          echo " Version: ${{ steps.version.outputs.VERSION }}"
+          echo " Version: ${{ steps.version.outputs.version }}"
           echo " Build: ${{ github.run_number }}"
           echo "======================================"
 
@@ -36,4 +39,4 @@ jobs:
       - name: Build completed
         run: |
           echo "Solaris Energy validation completed successfully."
-          echo "Version ${{ steps.version.outputs.VERSION }} - Build ${{ github.run_number }}"
+          echo "Version ${{ steps.version.outputs.version }} - Build ${{ github.run_number }}"
