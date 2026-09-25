@@ -1,46 +1,102 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================================
-       BACK TO HOME
-    ========================================= */
+    /* =====================================================
+       FLOATING ACTIONS
+       COTIZAR + CHAT + BACK TO HOME
+    ====================================================== */
 
-    const backToHome = document.getElementById("backToHome");
+    const backToHome =
+        document.getElementById("backToHome");
+
+    const floatingQuote =
+        document.querySelector(".floating-quote");
+
+
+    /* =====================================================
+       FLOATING QUOTE BUTTON
+    ====================================================== */
+
+    if (floatingQuote) {
+
+        floatingQuote.addEventListener(
+            "click",
+            event => {
+
+                event.preventDefault();
+
+                const quoteSection =
+                    document.getElementById("cotizar");
+
+                if (quoteSection) {
+
+                    quoteSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       BACK TO HOME
+    ====================================================== */
 
     if (backToHome) {
 
         const updateBackToHomeButton = () => {
 
             if (window.scrollY > 500) {
-                backToHome.classList.add("visible");
+
+                backToHome.classList.add(
+                    "visible"
+                );
+
             } else {
-                backToHome.classList.remove("visible");
+
+                backToHome.classList.remove(
+                    "visible"
+                );
+
             }
 
         };
 
+
         window.addEventListener(
             "scroll",
-            updateBackToHomeButton
+            updateBackToHomeButton,
+            {
+                passive: true
+            }
         );
+
 
         updateBackToHomeButton();
 
 
-        backToHome.addEventListener("click", () => {
+        backToHome.addEventListener(
+            "click",
+            () => {
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
-        });
+            }
+        );
 
     }
 
 
-    /* =========================================
+    /* =====================================================
        CFE RATES
-    ========================================= */
+    ====================================================== */
 
     const cfeRates = {
 
@@ -50,14 +106,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 value: "domestica",
                 name: "Tarifa doméstica",
                 description:
-                    "Tarifa residencial para servicio doméstico."
+                    "Tarifa de servicio doméstico. Verifica en tu recibo CFE la tarifa específica aplicable."
             },
 
             {
                 value: "dac",
-                name: "DAC - Doméstica de Alto Consumo",
+                name: "DAC — Doméstica de Alto Consumo",
                 description:
-                    "Tarifa residencial aplicable a usuarios clasificados como de alto consumo."
+                    "Tarifa doméstica de alto consumo. Los sistemas solares pueden ser especialmente relevantes para usuarios con consumos elevados."
             }
 
         ],
@@ -67,44 +123,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
             {
                 value: "pdbt",
-                name: "PDBT - Pequeña Demanda en Baja Tensión",
+                name: "PDBT",
                 description:
-                    "Tarifa para pequeña demanda en baja tensión."
+                    "Pequeña Demanda en Baja Tensión."
             },
 
             {
                 value: "gdbt",
-                name: "GDBT - Gran Demanda en Baja Tensión",
+                name: "GDBT",
                 description:
-                    "Tarifa para gran demanda en baja tensión."
+                    "Gran Demanda en Baja Tensión."
             },
 
             {
                 value: "gdmto",
-                name: "GDMTO - Gran Demanda en Media Tensión Ordinaria",
+                name: "GDMTO",
                 description:
-                    "Tarifa para gran demanda en media tensión ordinaria."
+                    "Gran Demanda en Media Tensión Ordinaria."
             },
 
             {
                 value: "gdmth",
-                name: "GDMTH - Gran Demanda en Media Tensión Horaria",
+                name: "GDMTH",
                 description:
-                    "Tarifa para gran demanda en media tensión con componentes horarios."
+                    "Gran Demanda en Media Tensión Horaria."
             },
 
             {
                 value: "dist",
-                name: "DIST - Demanda Industrial en Subtransmisión",
+                name: "DIST",
                 description:
-                    "Categoría orientada a servicios de mayor demanda conectados en niveles superiores de tensión."
+                    "Tarifa asociada con servicios de distribución."
             },
 
             {
                 value: "dit",
-                name: "DIT - Demanda Industrial en Transmisión",
+                name: "DIT",
                 description:
-                    "Categoría orientada a grandes usuarios conectados en niveles de transmisión."
+                    "Tarifa asociada con servicios en alta tensión."
             }
 
         ]
@@ -112,77 +168,200 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 
-    /* =========================================
-       ELEMENTS
-    ========================================= */
-
-    const quoteForm =
-        document.getElementById("solarQuoteForm");
-
-    const energyConsumption =
-        document.getElementById("energyConsumption");
-
-    const cfeRate =
+    const cfeRateSelect =
         document.getElementById("cfeRate");
 
-    const rateHelperText =
-        document.getElementById("rateHelperText");
+    const rateName =
+        document.getElementById("rateName");
 
-    const rateInfoTitle =
-        document.getElementById("rateInfoTitle");
+    const rateDescription =
+        document.getElementById("rateDescription");
 
-    const rateInfoDescription =
-        document.getElementById("rateInfoDescription");
+
+    function getSelectedProjectType() {
+
+        const selected =
+            document.querySelector(
+                'input[name="projectType"]:checked'
+            );
+
+        return selected
+            ? selected.value
+            : "residencial";
+
+    }
+
+
+    function updateRateDescription() {
+
+        if (!cfeRateSelect) {
+            return;
+        }
+
+        const projectType =
+            getSelectedProjectType();
+
+        const rates =
+            cfeRates[projectType];
+
+        const selectedRate =
+            rates.find(
+                rate =>
+                    rate.value ===
+                    cfeRateSelect.value
+            ) || rates[0];
+
+
+        if (rateName) {
+
+            rateName.textContent =
+                selectedRate.name;
+
+        }
+
+
+        if (rateDescription) {
+
+            rateDescription.textContent =
+                selectedRate.description;
+
+        }
+
+    }
+
+
+    function rebuildRateOptions() {
+
+        if (!cfeRateSelect) {
+            return;
+        }
+
+        const projectType =
+            getSelectedProjectType();
+
+        const rates =
+            cfeRates[projectType];
+
+
+        cfeRateSelect.innerHTML = "";
+
+
+        rates.forEach(rate => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+            option.value =
+                rate.value;
+
+            option.textContent =
+                rate.name;
+
+            cfeRateSelect.appendChild(
+                option
+            );
+
+        });
+
+
+        updateRateDescription();
+
+    }
+
+
+    document
+        .querySelectorAll(
+            'input[name="projectType"]'
+        )
+        .forEach(radio => {
+
+            radio.addEventListener(
+                "change",
+                rebuildRateOptions
+            );
+
+        });
+
+
+    if (cfeRateSelect) {
+
+        cfeRateSelect.addEventListener(
+            "change",
+            updateRateDescription
+        );
+
+    }
+
+
+    rebuildRateOptions();
+
+
+    /* =====================================================
+       PROJECT PRESELECTION
+    ====================================================== */
+
+    document
+        .querySelectorAll("[data-project]")
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    const project =
+                        link.dataset.project;
+
+                    const radio =
+                        document.querySelector(
+                            `input[name="projectType"][value="${project}"]`
+                        );
+
+
+                    if (radio) {
+
+                        radio.checked = true;
+
+                        rebuildRateOptions();
+
+                    }
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       SOLAR CALCULATOR
+    ====================================================== */
+
+    const solarQuoteForm =
+        document.getElementById(
+            "solarQuoteForm"
+        );
+
+    const energyConsumption =
+        document.getElementById(
+            "energyConsumption"
+        );
 
     const quoteProcessing =
-        document.getElementById("quoteProcessing");
+        document.getElementById(
+            "quoteProcessing"
+        );
 
     const quoteResults =
-        document.getElementById("quoteResults");
+        document.getElementById(
+            "quoteResults"
+        );
 
     const recalculateButton =
-        document.getElementById("recalculateButton");
-
-
-    /* =========================================
-       RESULTS
-    ========================================= */
-
-    const resultPanels =
-        document.getElementById("resultPanels");
-
-    const resultCapacity =
-        document.getElementById("resultCapacity");
-
-    const resultCost =
-        document.getElementById("resultCost");
-
-    const resultAnnualConsumption =
         document.getElementById(
-            "resultAnnualConsumption"
+            "recalculateButton"
         );
 
-    const resultAnnualGeneration =
-        document.getElementById(
-            "resultAnnualGeneration"
-        );
-
-    const resultCoverage =
-        document.getElementById("resultCoverage");
-
-    const finance12 =
-        document.getElementById("finance12");
-
-    const finance24 =
-        document.getElementById("finance24");
-
-    const finance36 =
-        document.getElementById("finance36");
-
-
-    /* =========================================
-       SOLAR ASSUMPTIONS
-    ========================================= */
 
     const solarAssumptions = {
 
@@ -199,10 +378,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 
-    /* =========================================
-       CURRENCY FORMATTER
-    ========================================= */
-
     const currencyFormatter =
         new Intl.NumberFormat(
             "es-MX",
@@ -214,219 +389,14 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    /* =========================================
-       GET PROJECT TYPE
-    ========================================= */
-
-    function getSelectedProjectType() {
-
-        const selected =
-            document.querySelector(
-                'input[name="projectType"]:checked'
-            );
-
-        return selected
-            ? selected.value
-            : "residencial";
-
-    }
-
-
-    /* =========================================
-       BUILD RATE OPTIONS
-    ========================================= */
-
-    function buildRateOptions(projectType) {
-
-        if (!cfeRate) {
-            return;
-        }
-
-        cfeRate.innerHTML =
-            '<option value="">Selecciona una tarifa</option>';
-
-
-        const rates =
-            cfeRates[projectType] || [];
-
-
-        rates.forEach((rate) => {
-
-            const option =
-                document.createElement("option");
-
-            option.value = rate.value;
-
-            option.textContent = rate.name;
-
-            cfeRate.appendChild(option);
-
-        });
-
-
-        if (rateInfoTitle) {
-            rateInfoTitle.textContent =
-                "Información de tarifa";
-        }
-
-        if (rateInfoDescription) {
-            rateInfoDescription.textContent =
-                "Selecciona una tarifa para consultar una descripción general.";
-        }
-
-        if (rateHelperText) {
-
-            if (projectType === "residencial") {
-
-                rateHelperText.textContent =
-                    "Selecciona la tarifa residencial que aparece en tu recibo.";
-
-            } else {
-
-                rateHelperText.textContent =
-                    "Selecciona la tarifa correspondiente a tu negocio o PyME.";
-
-            }
-
-        }
-
-    }
-
-
-    /* =========================================
-       RATE INFORMATION
-    ========================================= */
-
-    function updateRateInformation() {
-
-        if (!cfeRate) {
-            return;
-        }
-
-
-        const projectType =
-            getSelectedProjectType();
-
-        const rates =
-            cfeRates[projectType] || [];
-
-        const selectedRate =
-            rates.find(
-                (rate) =>
-                    rate.value === cfeRate.value
-            );
-
-
-        if (!selectedRate) {
-
-            if (rateInfoTitle) {
-                rateInfoTitle.textContent =
-                    "Información de tarifa";
-            }
-
-            if (rateInfoDescription) {
-                rateInfoDescription.textContent =
-                    "Selecciona una tarifa para consultar una descripción general.";
-            }
-
-            return;
-
-        }
-
-
-        if (rateInfoTitle) {
-            rateInfoTitle.textContent =
-                selectedRate.name;
-        }
-
-        if (rateInfoDescription) {
-            rateInfoDescription.textContent =
-                selectedRate.description;
-        }
-
-    }
-
-
-    /* =========================================
-       PROJECT TYPE CHANGE
-    ========================================= */
-
-    const projectRadios =
-        document.querySelectorAll(
-            'input[name="projectType"]'
-        );
-
-
-    projectRadios.forEach((radio) => {
-
-        radio.addEventListener(
-            "change",
-            () => {
-
-                buildRateOptions(
-                    getSelectedProjectType()
-                );
-
+    const numberFormatter =
+        new Intl.NumberFormat(
+            "es-MX",
+            {
+                maximumFractionDigits: 0
             }
         );
 
-    });
-
-
-    if (cfeRate) {
-
-        cfeRate.addEventListener(
-            "change",
-            updateRateInformation
-        );
-
-    }
-
-
-    /* =========================================
-       PROJECT LINKS
-    ========================================= */
-
-    const projectLinks =
-        document.querySelectorAll(
-            "[data-project]"
-        );
-
-
-    projectLinks.forEach((link) => {
-
-        link.addEventListener(
-            "click",
-            () => {
-
-                const projectType =
-                    link.dataset.project;
-
-                const radio =
-                    document.querySelector(
-                        `input[name="projectType"][value="${projectType}"]`
-                    );
-
-
-                if (radio) {
-
-                    radio.checked = true;
-
-                    buildRateOptions(
-                        projectType
-                    );
-
-                }
-
-            }
-        );
-
-    });
-
-
-    /* =========================================
-       CALCULATE SOLAR PROJECT
-    ========================================= */
 
     function calculateSolarProject(
         bimonthlyConsumption,
@@ -437,17 +407,16 @@ document.addEventListener("DOMContentLoaded", () => {
             bimonthlyConsumption * 6;
 
 
-        const requiredAnnualGeneration =
-            annualConsumption *
-            solarAssumptions.targetCoverage;
-
-
         const requiredCapacity =
-            requiredAnnualGeneration /
-            solarAssumptions.annualGenerationPerKwp;
+            (
+                annualConsumption *
+                solarAssumptions.targetCoverage
+            ) /
+            solarAssumptions
+                .annualGenerationPerKwp;
 
 
-        const numberOfPanels =
+        const panels =
             Math.ceil(
                 requiredCapacity /
                 solarAssumptions.panelPowerKw
@@ -455,20 +424,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         const installedCapacity =
-            numberOfPanels *
+            panels *
             solarAssumptions.panelPowerKw;
 
 
-        const estimatedAnnualGeneration =
+        const annualGeneration =
             installedCapacity *
-            solarAssumptions.annualGenerationPerKwp;
+            solarAssumptions
+                .annualGenerationPerKwp;
 
 
-        const estimatedCoverage =
+        const coverage =
             Math.min(
                 100,
                 (
-                    estimatedAnnualGeneration /
+                    annualGeneration /
                     annualConsumption
                 ) * 100
             );
@@ -476,11 +446,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const costPerKwp =
             projectType === "pyme"
-                ? solarAssumptions.businessCostPerKwp
-                : solarAssumptions.residentialCostPerKwp;
+                ? solarAssumptions
+                    .businessCostPerKwp
+                : solarAssumptions
+                    .residentialCostPerKwp;
 
 
-        const estimatedCost =
+        const investment =
             installedCapacity *
             costPerKwp;
 
@@ -489,87 +461,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
             annualConsumption,
 
-            numberOfPanels,
+            panels,
 
             installedCapacity,
 
-            estimatedAnnualGeneration,
+            annualGeneration,
 
-            estimatedCoverage,
+            coverage,
 
-            estimatedCost,
-
-            payment12:
-                estimatedCost / 12,
-
-            payment24:
-                estimatedCost / 24,
-
-            payment36:
-                estimatedCost / 36
+            investment
 
         };
 
     }
 
 
-    /* =========================================
-       CLEAR RESULTS
-    ========================================= */
+    function displaySolarResults(
+        result,
+        projectType
+    ) {
 
-    function clearResults() {
+        const resultPanels =
+            document.getElementById(
+                "resultPanels"
+            );
 
-        if (resultPanels) {
-            resultPanels.textContent = "--";
-        }
+        const resultCapacity =
+            document.getElementById(
+                "resultCapacity"
+            );
 
-        if (resultCapacity) {
-            resultCapacity.textContent = "--";
-        }
+        const resultInvestment =
+            document.getElementById(
+                "resultInvestment"
+            );
 
-        if (resultCost) {
-            resultCost.textContent = "--";
-        }
+        const resultAnnualConsumption =
+            document.getElementById(
+                "resultAnnualConsumption"
+            );
 
-        if (resultAnnualConsumption) {
-            resultAnnualConsumption.textContent =
-                "--";
-        }
+        const resultAnnualGeneration =
+            document.getElementById(
+                "resultAnnualGeneration"
+            );
 
-        if (resultAnnualGeneration) {
-            resultAnnualGeneration.textContent =
-                "--";
-        }
+        const resultCoverage =
+            document.getElementById(
+                "resultCoverage"
+            );
 
-        if (resultCoverage) {
-            resultCoverage.textContent = "--";
-        }
+        const resultDescription =
+            document.getElementById(
+                "resultDescription"
+            );
 
-        if (finance12) {
-            finance12.textContent = "--";
-        }
-
-        if (finance24) {
-            finance24.textContent = "--";
-        }
-
-        if (finance36) {
-            finance36.textContent = "--";
-        }
-
-    }
-
-
-    /* =========================================
-       DISPLAY RESULTS
-    ========================================= */
-
-    function displayResults(results) {
 
         if (resultPanels) {
 
             resultPanels.textContent =
-                results.numberOfPanels;
+                result.panels;
 
         }
 
@@ -577,17 +528,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (resultCapacity) {
 
             resultCapacity.textContent =
-                results.installedCapacity
-                    .toFixed(2);
+                `${result.installedCapacity.toFixed(2)} kWp`;
 
         }
 
 
-        if (resultCost) {
+        if (resultInvestment) {
 
-            resultCost.textContent =
+            resultInvestment.textContent =
                 currencyFormatter.format(
-                    results.estimatedCost
+                    result.investment
                 );
 
         }
@@ -596,9 +546,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (resultAnnualConsumption) {
 
             resultAnnualConsumption.textContent =
-                Math.round(
-                    results.annualConsumption
-                ).toLocaleString("es-MX");
+                numberFormatter.format(
+                    result.annualConsumption
+                );
 
         }
 
@@ -606,9 +556,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (resultAnnualGeneration) {
 
             resultAnnualGeneration.textContent =
-                Math.round(
-                    results.estimatedAnnualGeneration
-                ).toLocaleString("es-MX");
+                numberFormatter.format(
+                    result.annualGeneration
+                );
 
         }
 
@@ -616,36 +566,76 @@ document.addEventListener("DOMContentLoaded", () => {
         if (resultCoverage) {
 
             resultCoverage.textContent =
-                `${results.estimatedCoverage.toFixed(0)}%`;
+                `${result.coverage.toFixed(0)}%`;
 
         }
 
 
-        if (finance12) {
+        if (resultDescription) {
 
-            finance12.textContent =
+            resultDescription.textContent =
+                projectType === "pyme"
+                    ? "Estimación preliminar para tu proyecto comercial."
+                    : "Estimación preliminar para tu proyecto residencial.";
+
+        }
+
+
+        /* =================================================
+           FINANCING
+        ================================================= */
+
+        const payment12 =
+            result.investment / 12;
+
+        const payment24 =
+            result.investment / 24;
+
+        const payment36 =
+            result.investment / 36;
+
+
+        const payment12Element =
+            document.getElementById(
+                "payment12"
+            );
+
+        const payment24Element =
+            document.getElementById(
+                "payment24"
+            );
+
+        const payment36Element =
+            document.getElementById(
+                "payment36"
+            );
+
+
+        if (payment12Element) {
+
+            payment12Element.textContent =
                 currencyFormatter.format(
-                    results.payment12
+                    payment12
                 );
 
         }
 
 
-        if (finance24) {
+        if (payment24Element) {
 
-            finance24.textContent =
+            payment24Element.textContent =
                 currencyFormatter.format(
-                    results.payment24
+                    payment24
                 );
 
         }
 
 
-        if (finance36) {
+        if (payment36Element) {
 
-            finance36.textContent =
+            payment36Element.textContent =
                 currencyFormatter.format(
-                    results.payment36
+                    payment36
                 );
 
         }
@@ -653,15 +643,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================================
-       FORM SUBMIT
-    ========================================= */
+    if (
+        solarQuoteForm &&
+        energyConsumption &&
+        quoteProcessing &&
+        quoteResults
+    ) {
 
-    if (quoteForm) {
-
-        quoteForm.addEventListener(
+        solarQuoteForm.addEventListener(
             "submit",
-            (event) => {
+            event => {
 
                 event.preventDefault();
 
@@ -672,12 +663,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
 
 
-                const projectType =
-                    getSelectedProjectType();
-
-
                 if (
-                    !consumption ||
+                    !Number.isFinite(consumption) ||
                     consumption <= 0
                 ) {
 
@@ -688,70 +675,52 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                if (
-                    !cfeRate ||
-                    !cfeRate.value
-                ) {
-
-                    if (cfeRate) {
-                        cfeRate.focus();
-                    }
-
-                    return;
-
-                }
+                const projectType =
+                    getSelectedProjectType();
 
 
-                clearResults();
+                quoteResults.hidden =
+                    true;
 
 
-                if (quoteResults) {
-                    quoteResults.hidden = true;
-                }
+                quoteProcessing.hidden =
+                    false;
 
 
-                if (quoteProcessing) {
-
-                    quoteProcessing.hidden = false;
-
-                    quoteProcessing.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center"
-                    });
-
-                }
+                quoteProcessing.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
 
 
-                const results =
+                const result =
                     calculateSolarProject(
                         consumption,
                         projectType
                     );
 
 
-                window.setTimeout(
+                setTimeout(
                     () => {
 
-                        if (quoteProcessing) {
-                            quoteProcessing.hidden =
-                                true;
-                        }
+                        quoteProcessing.hidden =
+                            true;
 
 
-                        displayResults(results);
+                        displaySolarResults(
+                            result,
+                            projectType
+                        );
 
 
-                        if (quoteResults) {
+                        quoteResults.hidden =
+                            false;
 
-                            quoteResults.hidden =
-                                false;
 
-                            quoteResults.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start"
-                            });
-
-                        }
+                        quoteResults.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
 
                     },
                     1800
@@ -763,83 +732,720 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================================
-       RESET QUOTE
-    ========================================= */
+    /* =====================================================
+       RESET CALCULATOR
+    ====================================================== */
 
-    function resetQuote() {
-
-        if (quoteResults) {
-            quoteResults.hidden = true;
-        }
-
-        if (quoteProcessing) {
-            quoteProcessing.hidden = true;
-        }
-
-
-        clearResults();
-
-
-        if (energyConsumption) {
-            energyConsumption.value = "";
-        }
-
-
-        const residentialRadio =
-            document.querySelector(
-                'input[name="projectType"][value="residencial"]'
-            );
-
-
-        if (residentialRadio) {
-            residentialRadio.checked = true;
-        }
-
-
-        buildRateOptions("residencial");
-
-
-        if (quoteForm) {
-
-            quoteForm.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-        }
-
-
-        window.setTimeout(
-            () => {
-
-                if (energyConsumption) {
-                    energyConsumption.focus();
-                }
-
-            },
-            500
-        );
-
-    }
-
-
-    if (recalculateButton) {
+    if (
+        recalculateButton &&
+        solarQuoteForm &&
+        energyConsumption &&
+        quoteProcessing &&
+        quoteResults
+    ) {
 
         recalculateButton.addEventListener(
             "click",
-            resetQuote
+            () => {
+
+                quoteProcessing.hidden =
+                    true;
+
+                quoteResults.hidden =
+                    true;
+
+
+                solarQuoteForm.reset();
+
+
+                const residentialRadio =
+                    document.querySelector(
+                        'input[name="projectType"][value="residencial"]'
+                    );
+
+
+                if (residentialRadio) {
+
+                    residentialRadio.checked =
+                        true;
+
+                }
+
+
+                rebuildRateOptions();
+
+
+                energyConsumption.value =
+                    "";
+
+
+                solarQuoteForm.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+
+                setTimeout(
+                    () => {
+
+                        energyConsumption.focus();
+
+                    },
+                    500
+                );
+
+            }
         );
 
     }
 
 
-    /* =========================================
-       INITIALIZE
-    ========================================= */
+    /* =====================================================
+       SOLARIS ASSISTANT
+       10 QUESTIONS + 10 ANSWERS
+    ====================================================== */
 
-    buildRateOptions(
-        getSelectedProjectType()
+    const chatbotToggle =
+        document.getElementById(
+            "chatbotToggle"
+        );
+
+    const chatbotPanel =
+        document.getElementById(
+            "chatbotPanel"
+        );
+
+    const chatbotClose =
+        document.getElementById(
+            "chatbotClose"
+        );
+
+    const chatbotMessages =
+        document.getElementById(
+            "chatbotMessages"
+        );
+
+    const chatbotQuestions =
+        document.getElementById(
+            "chatbotQuestions"
+        );
+
+    const chatbotReset =
+        document.getElementById(
+            "chatbotReset"
+        );
+
+    const chatbotNotification =
+        document.querySelector(
+            ".chatbot-notification"
+        );
+
+
+    const chatbotData = [
+
+        {
+            question:
+                "¿Cuántos paneles solares necesito?",
+
+            answer:
+                "La cantidad depende principalmente de tu consumo eléctrico. En Solaris Energy utilizamos tu consumo en kWh para realizar una estimación inicial. Puedes utilizar nuestro Cotizador Solar para obtener una recomendación preliminar del número de paneles y la capacidad del sistema."
+        },
+
+        {
+            question:
+                "¿Cuánto puedo ahorrar con paneles solares?",
+
+            answer:
+                "El ahorro depende de factores como tu consumo, tarifa eléctrica, ubicación, generación solar y dimensionamiento del sistema. Un proyecto correctamente dimensionado puede reducir de forma importante el consumo de energía proveniente de la red. La cifra final debe determinarse mediante una evaluación específica del proyecto."
+        },
+
+        {
+            question:
+                "¿Qué planes de financiamiento ofrecen?",
+
+            answer:
+                "Nuestro simulador presenta alternativas ilustrativas de 12, 24 y 36 meses. Los pagos mostrados representan una división del costo estimado del proyecto y no incluyen intereses, comisiones, seguros u otros costos financieros."
+        },
+
+        {
+            question:
+                "¿Trabajan con proyectos residenciales?",
+
+            answer:
+                "Sí. Diseñamos proyectos para casas habitación considerando el consumo energético del hogar, el espacio disponible y la capacidad necesaria para generar una solución solar adecuada."
+        },
+
+        {
+            question:
+                "¿Instalan sistemas para negocios y PyMEs?",
+
+            answer:
+                "Sí. Solaris Energy contempla soluciones para pequeñas y medianas empresas. Analizamos el consumo del negocio para estimar capacidad, número de paneles y características generales del proyecto."
+        },
+
+        {
+            question:
+                "¿Qué marcas de paneles y equipos manejan?",
+
+            answer:
+                "Nuestro ecosistema contempla marcas como Huawei, Trina Solar, Solis, Enphase, Unirac, JA Solar, Sungrow, Canadian Solar, Tesla, Risen, Jinko Solar, First Solar, SMA, Yingli Solar y Hanwha. La selección específica dependerá de las necesidades del proyecto."
+        },
+
+        {
+            question:
+                "¿Ofrecen mantenimiento?",
+
+            answer:
+                "Sí. Contamos con planes de mantenimiento Solaris Care, Solaris Care+ y Solaris Business, orientados a inspección preventiva, seguimiento de desempeño y soporte para instalaciones residenciales y comerciales."
+        },
+
+        {
+            question:
+                "¿Cómo funciona Solaris Connect?",
+
+            answer:
+                "Solaris Connect es nuestra propuesta de aplicación móvil para Android y iOS. Permite visualizar información sobre generación solar, consumo energético, rendimiento del sistema y alertas desde un dispositivo móvil."
+        },
+
+        {
+            question:
+                "¿Cuánto tarda una instalación?",
+
+            answer:
+                "El tiempo depende del tamaño y complejidad del proyecto. Antes de establecer un plazo se requiere evaluar consumo, dimensionamiento, disponibilidad de equipos, características del inmueble y programación de instalación."
+        },
+
+        {
+            question:
+                "¿Cómo puedo solicitar una cotización?",
+
+            answer:
+                "Puedes utilizar el Cotizador Solar disponible en esta misma página. Ingresa tu consumo bimestral en kWh, selecciona si tu proyecto es residencial o PyME y elige tu tarifa eléctrica. El sistema generará una estimación preliminar de paneles, capacidad, generación e inversión."
+        }
+
+    ];
+
+
+    /* =====================================================
+       RENDER QUESTIONS
+    ====================================================== */
+
+    function renderChatbotQuestions() {
+
+        if (!chatbotQuestions) {
+            return;
+        }
+
+
+        chatbotQuestions.innerHTML = "";
+
+
+        chatbotData.forEach(
+            (item, index) => {
+
+                const button =
+                    document.createElement(
+                        "button"
+                    );
+
+
+                button.type =
+                    "button";
+
+
+                button.className =
+                    "chat-question-button";
+
+
+                button.textContent =
+                    `${index + 1}. ${item.question}`;
+
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        processChatbotQuestion(
+                            item
+                        );
+
+                    }
+                );
+
+
+                chatbotQuestions.appendChild(
+                    button
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       ADD USER MESSAGE
+    ====================================================== */
+
+    function addUserMessage(text) {
+
+        if (!chatbotMessages) {
+            return;
+        }
+
+
+        const message =
+            document.createElement("div");
+
+
+        message.className =
+            "chat-message user-message";
+
+
+        const bubble =
+            document.createElement("div");
+
+
+        bubble.className =
+            "message-bubble";
+
+
+        bubble.textContent =
+            text;
+
+
+        message.appendChild(
+            bubble
+        );
+
+
+        chatbotMessages.appendChild(
+            message
+        );
+
+
+        scrollChatToBottom();
+
+    }
+
+
+    /* =====================================================
+       ADD ASSISTANT MESSAGE
+    ====================================================== */
+
+    function addAssistantMessage(text) {
+
+        if (!chatbotMessages) {
+            return;
+        }
+
+
+        const message =
+            document.createElement("div");
+
+
+        message.className =
+            "chat-message assistant-message";
+
+
+        const avatar =
+            document.createElement("div");
+
+
+        avatar.className =
+            "message-avatar";
+
+
+        avatar.textContent =
+            "☀";
+
+
+        const bubble =
+            document.createElement("div");
+
+
+        bubble.className =
+            "message-bubble";
+
+
+        const paragraph =
+            document.createElement("p");
+
+
+        paragraph.textContent =
+            text;
+
+
+        bubble.appendChild(
+            paragraph
+        );
+
+
+        message.appendChild(
+            avatar
+        );
+
+
+        message.appendChild(
+            bubble
+        );
+
+
+        chatbotMessages.appendChild(
+            message
+        );
+
+
+        scrollChatToBottom();
+
+    }
+
+
+    /* =====================================================
+       TYPING INDICATOR
+    ====================================================== */
+
+    function showTypingIndicator() {
+
+        if (!chatbotMessages) {
+            return;
+        }
+
+
+        const message =
+            document.createElement("div");
+
+
+        message.className =
+            "chat-message assistant-message";
+
+
+        message.id =
+            "chatbotTypingMessage";
+
+
+        const avatar =
+            document.createElement("div");
+
+
+        avatar.className =
+            "message-avatar";
+
+
+        avatar.textContent =
+            "☀";
+
+
+        const typing =
+            document.createElement("div");
+
+
+        typing.className =
+            "message-bubble chatbot-typing";
+
+
+        typing.innerHTML =
+            `
+                <span></span>
+                <span></span>
+                <span></span>
+            `;
+
+
+        message.appendChild(
+            avatar
+        );
+
+
+        message.appendChild(
+            typing
+        );
+
+
+        chatbotMessages.appendChild(
+            message
+        );
+
+
+        scrollChatToBottom();
+
+    }
+
+
+    function removeTypingIndicator() {
+
+        const typingMessage =
+            document.getElementById(
+                "chatbotTypingMessage"
+            );
+
+
+        if (typingMessage) {
+
+            typingMessage.remove();
+
+        }
+
+    }
+
+
+    /* =====================================================
+       PROCESS QUESTION
+    ====================================================== */
+
+    function processChatbotQuestion(item) {
+
+        addUserMessage(
+            item.question
+        );
+
+
+        showTypingIndicator();
+
+
+        /*
+            Short delay makes the simulated
+            conversation feel more natural.
+        */
+
+        setTimeout(
+            () => {
+
+                removeTypingIndicator();
+
+
+                addAssistantMessage(
+                    item.answer
+                );
+
+            },
+            700
+        );
+
+    }
+
+
+    /* =====================================================
+       SCROLL CHAT
+    ====================================================== */
+
+    function scrollChatToBottom() {
+
+        if (!chatbotMessages) {
+            return;
+        }
+
+
+        requestAnimationFrame(
+            () => {
+
+                chatbotMessages.scrollTop =
+                    chatbotMessages.scrollHeight;
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       OPEN CHAT
+    ====================================================== */
+
+    function openChatbot() {
+
+        if (
+            !chatbotPanel ||
+            !chatbotToggle
+        ) {
+            return;
+        }
+
+
+        chatbotPanel.classList.add(
+            "open"
+        );
+
+
+        chatbotPanel.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        chatbotToggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+
+        if (chatbotNotification) {
+
+            chatbotNotification.style.display =
+                "none";
+
+        }
+
+
+        scrollChatToBottom();
+
+    }
+
+
+    /* =====================================================
+       CLOSE CHAT
+    ====================================================== */
+
+    function closeChatbot() {
+
+        if (
+            !chatbotPanel ||
+            !chatbotToggle
+        ) {
+            return;
+        }
+
+
+        chatbotPanel.classList.remove(
+            "open"
+        );
+
+
+        chatbotPanel.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        chatbotToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+
+    /* =====================================================
+       RESET CHAT
+    ====================================================== */
+
+    function resetChatbot() {
+
+        if (!chatbotMessages) {
+            return;
+        }
+
+
+        chatbotMessages.innerHTML =
+            `
+                <div class="chat-message assistant-message">
+
+                    <div class="message-avatar">
+                        ☀
+                    </div>
+
+                    <div class="message-bubble">
+
+                        <strong>
+                            ¡Hola!
+                        </strong>
+
+                        <p>
+                            Soy el asistente virtual de Solaris Energy.
+                            Puedo ayudarte con información sobre nuestros
+                            sistemas solares.
+                        </p>
+
+                        <p>
+                            Selecciona una de las preguntas disponibles.
+                        </p>
+
+                    </div>
+
+                </div>
+            `;
+
+
+        scrollChatToBottom();
+
+    }
+
+
+    /* =====================================================
+       CHAT EVENTS
+    ====================================================== */
+
+    if (
+        chatbotToggle &&
+        chatbotPanel
+    ) {
+
+        chatbotToggle.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    chatbotPanel.classList
+                        .contains("open")
+                ) {
+
+                    closeChatbot();
+
+                } else {
+
+                    openChatbot();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    if (chatbotClose) {
+
+        chatbotClose.addEventListener(
+            "click",
+            closeChatbot
+        );
+
+    }
+
+
+    if (chatbotReset) {
+
+        chatbotReset.addEventListener(
+            "click",
+            resetChatbot
+        );
+
+    }
+
+
+    /*
+        Close with ESC key.
+    */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape" &&
+                chatbotPanel &&
+                chatbotPanel.classList
+                    .contains("open")
+            ) {
+
+                closeChatbot();
+
+            }
+
+        }
     );
+
+
+    renderChatbotQuestions();
 
 });
