@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Solaris Energy - Soluciones solares inteligentes para hogares y PyMEs.">
+    <meta name="description" content="Solaris Energy - Soluciones solares inteligentes para hogares y PyMEs."
+        data-i18n-content="meta.description">
 
     <title>Solaris Energy | Solar Solutions</title>
 
@@ -33,14 +34,37 @@
 
         <nav class="main-nav">
 
-            <a href="#como-funciona">¿Cómo funciona?</a>
-            <a href="#paneles">Paneles Solares</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#mantenimiento">Mantenimiento</a>
-            <a href="#operaciones">¿Cómo operamos?</a>
-            <a href="#nosotros">¿Quiénes somos?</a>
-            <a href="#alianzas">Alianzas y Certificaciones</a>
-            <a href="#solaris-connect">Solaris Connect</a>
+            <a href="#como-funciona" data-i18n="nav.how">
+                ¿Cómo funciona?
+            </a>
+
+            <a href="#paneles" data-i18n="nav.panels">
+                Paneles Solares
+            </a>
+
+            <a href="#proyectos" data-i18n="nav.projects">
+                Proyectos
+            </a>
+
+            <a href="#mantenimiento" data-i18n="nav.maintenance">
+                Mantenimiento
+            </a>
+
+            <a href="#operaciones" data-i18n="nav.operations">
+                ¿Cómo operamos?
+            </a>
+
+            <a href="#nosotros" data-i18n="nav.about">
+                ¿Quiénes somos?
+            </a>
+
+            <a href="#alianzas" data-i18n="nav.alliances">
+                Alianzas y Certificaciones
+            </a>
+
+            <a href="#solaris-connect" data-i18n="nav.connect">
+                Solaris Connect
+            </a>
 
         </nav>
 
@@ -82,13 +106,32 @@
                     </svg>
                 </a>
 
-                <!-- WhatsApp -->
                 <a href="#" aria-label="WhatsApp">
                     <svg viewBox="0 0 24 24">
                         <path
                             d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7 1-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2-.1-.2-.3-.2-.5-.3z" />
                     </svg>
                 </a>
+
+            </div>
+
+            <div class="language-selector" aria-label="Selector de idioma">
+
+                <button class="language-button active" type="button" data-language="es" aria-label="Cambiar a español"
+                    title="Español">
+
+                    <span class="language-flag">🇲🇽</span>
+                    <span class="language-code">ES</span>
+
+                </button>
+
+                <button class="language-button" type="button" data-language="en" aria-label="Switch to English"
+                    title="English">
+
+                    <span class="language-flags">🇺🇸🇨🇦</span>
+                    <span class="language-code">EN</span>
+
+                </button>
 
             </div>
 
@@ -106,16 +149,16 @@
 
             <div class="hero-content">
 
-                <span class="eyebrow">
+                <span class="eyebrow" data-i18n="hero.eyebrow">
                     SOLUCIONES SOLARES INTELIGENTES
                 </span>
 
                 <h1>
-                    Energía limpia
-                    <span>para un mejor mañana.</span>
+                    <span data-i18n="hero.title1">Energía limpia</span>
+                    <span data-i18n="hero.title2">para un mejor mañana.</span>
                 </h1>
 
-                <p>
+                <p data-i18n="hero.description">
                     Transformamos el consumo de energía de hogares y
                     negocios mediante soluciones solares eficientes,
                     accesibles y diseñadas para generar valor a largo plazo.
@@ -123,11 +166,11 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#cotizar" class="button-primary">
+                    <a href="#cotizar" class="button-primary" data-i18n="hero.quote">
                         Cotiza tu proyecto
                     </a>
 
-                    <a href="#paneles" class="button-secondary">
+                    <a href="#paneles" class="button-secondary" data-i18n="hero.panels">
                         Conoce nuestros paneles
                     </a>
 
@@ -137,23 +180,31 @@
 
                     <div class="hero-benefit environmental-benefit">
 
-                        <strong>Beneficios ambientales</strong>
+                        <strong data-i18n="hero.environment.title">
+                            Beneficios ambientales
+                        </strong>
 
                         <div class="environmental-icons">
 
                             <div>
                                 <b>♻</b>
-                                <small>Menor huella de carbono</small>
+                                <small data-i18n="hero.environment.carbon">
+                                    Menor huella de carbono
+                                </small>
                             </div>
 
                             <div>
                                 <b>CO₂</b>
-                                <small>Menos emisiones</small>
+                                <small data-i18n="hero.environment.emissions">
+                                    Menos emisiones
+                                </small>
                             </div>
 
                             <div>
                                 <b>♧</b>
-                                <small>Protección del entorno</small>
+                                <small data-i18n="hero.environment.protection">
+                                    Protección del entorno
+                                </small>
                             </div>
 
                         </div>
@@ -162,28 +213,31 @@
 
                     <div class="hero-benefit">
 
-                        <strong>Ahorro</strong>
+                        <strong data-i18n="hero.savings.title">
+                            Ahorro
+                        </strong>
 
-                        <span class="benefit-highlight">
+                        <span class="benefit-highlight" data-i18n="hero.savings.value">
                             Hasta 90%*
                         </span>
 
-                        <small>
-                            de ahorro potencial en consumo de energía
-                            de la red.
+                        <small data-i18n="hero.savings.description">
+                            de ahorro potencial en consumo de energía de la red.
                         </small>
 
                     </div>
 
                     <div class="hero-benefit">
 
-                        <strong>Financiamiento</strong>
+                        <strong data-i18n="hero.financing.title">
+                            Financiamiento
+                        </strong>
 
-                        <span class="benefit-highlight">
+                        <span class="benefit-highlight" data-i18n="hero.financing.value">
                             12 a 36 meses
                         </span>
 
-                        <small>
+                        <small data-i18n="hero.financing.description">
                             Planes flexibles para facilitar tu inversión solar.
                         </small>
 
@@ -196,9 +250,7 @@
             <div class="hero-visual">
 
                 <div class="hero-image-card">
-
                     <img src="images/slogan.png" alt="Energía hoy. Un mejor mañana.">
-
                 </div>
 
             </div>
@@ -213,11 +265,15 @@
 
             <div class="section-heading">
 
-                <span>DE LA INSTALACIÓN A TU RECIBO</span>
+                <span data-i18n="how.eyebrow">
+                    DE LA INSTALACIÓN A TU RECIBO
+                </span>
 
-                <h2>¿Cómo funciona tu sistema solar?</h2>
+                <h2 data-i18n="how.title">
+                    ¿Cómo funciona tu sistema solar?
+                </h2>
 
-                <p>
+                <p data-i18n="how.description">
                     Conoce de forma sencilla cómo Solaris Energy integra tu
                     proyecto, cómo fluye la energía y qué ocurre bajo
                     diferentes condiciones de operación.
@@ -225,28 +281,26 @@
 
             </div>
 
-            <!-- INTERCONEXIÓN CON CFE -->
-
             <div class="cfe-process-card">
 
                 <div class="cfe-process-content">
 
-                    <span class="process-tag">
+                    <span class="process-tag" data-i18n="cfe.tag">
                         INTERCONEXIÓN CON CFE
                     </span>
 
-                    <h3>
+                    <h3 data-i18n="cfe.title">
                         Nosotros te acompañamos durante todo el proceso.
                     </h3>
 
-                    <p>
+                    <p data-i18n="cfe.description1">
                         Un sistema solar interconectado trabaja en conjunto
                         con la red eléctrica. Por ello, el proyecto requiere
                         integrar la información técnica correspondiente y
                         realizar el proceso de interconexión aplicable.
                     </p>
 
-                    <p>
+                    <p data-i18n="cfe.description2">
                         Solaris Energy prepara la información del proyecto,
                         acompaña la gestión de interconexión y da seguimiento
                         al proceso correspondiente ante CFE.
@@ -256,7 +310,7 @@
 
                         <span>i</span>
 
-                        <p>
+                        <p data-i18n="cfe.note">
                             La autorización, modalidad de interconexión y
                             equipo de medición aplicable dependen de las
                             características del proyecto y del procedimiento
@@ -272,10 +326,12 @@
                     <div class="cfe-step">
                         <span>01</span>
                         <div>
-                            <strong>Evaluamos tu consumo</strong>
-                            <p>
-                                Analizamos tu consumo eléctrico y las
-                                características iniciales de la instalación.
+                            <strong data-i18n="cfe.step1.title">
+                                Evaluamos tu proyecto
+                            </strong>
+                            <p data-i18n="cfe.step1.description">
+                                Analizamos tu consumo, tipo de servicio y
+                                características generales de la instalación.
                             </p>
                         </div>
                     </div>
@@ -283,8 +339,10 @@
                     <div class="cfe-step">
                         <span>02</span>
                         <div>
-                            <strong>Diseñamos el sistema</strong>
-                            <p>
+                            <strong data-i18n="cfe.step2.title">
+                                Diseñamos el sistema
+                            </strong>
+                            <p data-i18n="cfe.step2.description">
                                 Determinamos capacidad, cantidad de paneles,
                                 inversor y componentes necesarios.
                             </p>
@@ -294,8 +352,10 @@
                     <div class="cfe-step">
                         <span>03</span>
                         <div>
-                            <strong>Proceso de interconexión</strong>
-                            <p>
+                            <strong data-i18n="cfe.step3.title">
+                                Proceso de interconexión
+                            </strong>
+                            <p data-i18n="cfe.step3.description">
                                 Integramos la información necesaria y
                                 acompañamos el procedimiento correspondiente
                                 ante CFE.
@@ -306,8 +366,10 @@
                     <div class="cfe-step">
                         <span>04</span>
                         <div>
-                            <strong>Medición bidireccional</strong>
-                            <p>
+                            <strong data-i18n="cfe.step4.title">
+                                Medición bidireccional
+                            </strong>
+                            <p data-i18n="cfe.step4.description">
                                 Cuando corresponde al esquema autorizado,
                                 el sistema de medición registra la energía
                                 tomada de la red y la energía entregada.
@@ -318,8 +380,10 @@
                     <div class="cfe-step">
                         <span>05</span>
                         <div>
-                            <strong>Sistema interconectado</strong>
-                            <p>
+                            <strong data-i18n="cfe.step5.title">
+                                Sistema interconectado
+                            </strong>
+                            <p data-i18n="cfe.step5.description">
                                 Tu instalación queda preparada para generar,
                                 consumir y, cuando corresponda, entregar
                                 energía excedente a la red.
@@ -337,11 +401,15 @@
 
                 <div class="solar-operation-heading">
 
-                    <span>DEL SOL A TU HOGAR</span>
+                    <span data-i18n="flow.eyebrow">
+                        DEL SOL A TU HOGAR
+                    </span>
 
-                    <h3>Así fluye la energía</h3>
+                    <h3 data-i18n="flow.title">
+                        Así fluye la energía
+                    </h3>
 
-                    <p>
+                    <p data-i18n="flow.description">
                         El sistema trabaja automáticamente para aprovechar
                         primero la energía solar disponible y mantener tu
                         propiedad conectada a la red eléctrica.
@@ -354,10 +422,9 @@
                     <div class="energy-flow-item">
                         <div class="energy-flow-icon sun-flow">☀</div>
                         <span class="flow-number">01</span>
-                        <h4>Luz solar</h4>
-                        <p>
-                            La radiación solar llega a los módulos
-                            fotovoltaicos.
+                        <h4 data-i18n="flow.step1.title">Luz solar</h4>
+                        <p data-i18n="flow.step1.description">
+                            La radiación solar llega a los módulos fotovoltaicos.
                         </p>
                     </div>
 
@@ -366,8 +433,8 @@
                     <div class="energy-flow-item">
                         <div class="energy-flow-icon">▦</div>
                         <span class="flow-number">02</span>
-                        <h4>Paneles solares</h4>
-                        <p>
+                        <h4 data-i18n="flow.step2.title">Paneles solares</h4>
+                        <p data-i18n="flow.step2.description">
                             Los paneles convierten la energía solar en
                             electricidad de corriente directa.
                         </p>
@@ -378,8 +445,8 @@
                     <div class="energy-flow-item">
                         <div class="energy-flow-icon">⚡</div>
                         <span class="flow-number">03</span>
-                        <h4>Inversor</h4>
-                        <p>
+                        <h4 data-i18n="flow.step3.title">Inversor</h4>
+                        <p data-i18n="flow.step3.description">
                             Convierte la electricidad en corriente alterna
                             utilizable por el inmueble.
                         </p>
@@ -390,8 +457,8 @@
                     <div class="energy-flow-item">
                         <div class="energy-flow-icon">🏠</div>
                         <span class="flow-number">04</span>
-                        <h4>Hogar o negocio</h4>
-                        <p>
+                        <h4 data-i18n="flow.step4.title">Hogar o negocio</h4>
+                        <p data-i18n="flow.step4.description">
                             La energía solar alimenta las cargas eléctricas
                             que se encuentran operando.
                         </p>
@@ -402,8 +469,8 @@
                     <div class="energy-flow-item">
                         <div class="energy-flow-icon grid-flow">⚡</div>
                         <span class="flow-number">05</span>
-                        <h4>Red eléctrica</h4>
-                        <p>
+                        <h4 data-i18n="flow.step5.title">Red eléctrica</h4>
+                        <p data-i18n="flow.step5.description">
                             La red complementa el suministro o recibe
                             excedentes según el esquema aplicable.
                         </p>
@@ -413,7 +480,7 @@
 
             </div>
 
-            <!-- ESCENARIOS DE ENERGÍA -->
+            <!-- ESCENARIOS -->
 
             <div class="energy-scenarios">
 
@@ -421,11 +488,15 @@
 
                     <div class="scenario-icon">☀</div>
 
-                    <span>DURANTE EL DÍA</span>
+                    <span data-i18n="scenario.day.label">
+                        DURANTE EL DÍA
+                    </span>
 
-                    <h3>Produces tu propia energía</h3>
+                    <h3 data-i18n="scenario.day.title">
+                        Produces tu propia energía
+                    </h3>
 
-                    <p>
+                    <p data-i18n="scenario.day.description">
                         Cuando existe suficiente radiación solar, los paneles
                         producen electricidad que se utiliza directamente para
                         cubrir parte o la totalidad del consumo de energía
@@ -433,7 +504,7 @@
                         así la energía que necesitas obtener de la red eléctrica.
                     </p>
 
-                    <div class="scenario-flow">
+                    <div class="scenario-flow" data-i18n="scenario.day.flow">
                         SOL → PANELES → TU PROPIEDAD
                     </div>
 
@@ -443,18 +514,22 @@
 
                     <div class="scenario-icon">↗</div>
 
-                    <span>CUANDO PRODUCES MÁS</span>
+                    <span data-i18n="scenario.surplus.label">
+                        CUANDO PRODUCES MÁS
+                    </span>
 
-                    <h3>¿Qué pasa con el excedente?</h3>
+                    <h3 data-i18n="scenario.surplus.title">
+                        ¿Qué pasa con el excedente?
+                    </h3>
 
-                    <p>
+                    <p data-i18n="scenario.surplus.description">
                         Cuando la generación solar supera tu consumo, la energía
                         excedente puede entregarse a la red eléctrica conforme
                         al esquema de interconexión aplicable a tu proyecto,
                         aprovechando mejor la energía producida por el sistema.
                     </p>
 
-                    <div class="scenario-flow">
+                    <div class="scenario-flow" data-i18n="scenario.surplus.flow">
                         PANELES → EXCEDENTE → RED
                     </div>
 
@@ -464,18 +539,22 @@
 
                     <div class="scenario-icon">☾</div>
 
-                    <span>DURANTE LA NOCHE</span>
+                    <span data-i18n="scenario.night.label">
+                        DURANTE LA NOCHE
+                    </span>
 
-                    <h3>¿De dónde viene la energía?</h3>
+                    <h3 data-i18n="scenario.night.title">
+                        ¿De dónde viene la energía?
+                    </h3>
 
-                    <p>
+                    <p data-i18n="scenario.night.description">
                         Durante la noche los paneles solares dejan de generar
                         electricidad. En un sistema interconectado convencional,
                         la energía necesaria para mantener tu propiedad operando
                         normalmente se obtiene directamente de la red eléctrica.
                     </p>
 
-                    <div class="scenario-flow">
+                    <div class="scenario-flow" data-i18n="scenario.night.flow">
                         RED → TU PROPIEDAD
                     </div>
 
@@ -483,19 +562,21 @@
 
             </div>
 
-            <!-- CONDICIONES REALES DE OPERACIÓN -->
+            <!-- CONDICIONES -->
 
             <div class="solar-conditions">
 
                 <div class="conditions-heading">
 
-                    <span>OPERACIÓN REAL</span>
+                    <span data-i18n="conditions.eyebrow">
+                        OPERACIÓN REAL
+                    </span>
 
-                    <h3>
+                    <h3 data-i18n="conditions.title">
                         ¿Qué pasa cuando las condiciones no son perfectas?
                     </h3>
 
-                    <p>
+                    <p data-i18n="conditions.description">
                         La producción solar puede variar. La nubosidad,
                         lluvia, suciedad, sombras y temperatura pueden
                         modificar temporalmente el rendimiento del sistema.
@@ -507,8 +588,10 @@
 
                     <article class="condition-card">
                         <div class="condition-icon">☁</div>
-                        <h4>Días nublados</h4>
-                        <p>
+                        <h4 data-i18n="conditions.cloudy.title">
+                            Días nublados
+                        </h4>
+                        <p data-i18n="conditions.cloudy.description">
                             Los paneles pueden continuar produciendo
                             electricidad con radiación difusa, aunque
                             normalmente a un nivel menor que durante un
@@ -518,19 +601,22 @@
 
                     <article class="condition-card">
                         <div class="condition-icon">☂</div>
-                        <h4>Temporada de lluvia</h4>
-                        <p>
+                        <h4 data-i18n="conditions.rain.title">
+                            Temporada de lluvia
+                        </h4>
+                        <p data-i18n="conditions.rain.description">
                             La lluvia y la nubosidad pueden reducir
                             temporalmente la generación. La red continúa
-                            disponible para complementar la energía
-                            necesaria.
+                            disponible para complementar la energía necesaria.
                         </p>
                     </article>
 
                     <article class="condition-card">
                         <div class="condition-icon">✦</div>
-                        <h4>Paneles sucios</h4>
-                        <p>
+                        <h4 data-i18n="conditions.dirty.title">
+                            Paneles sucios
+                        </h4>
+                        <p data-i18n="conditions.dirty.description">
                             Polvo, tierra, hojas y otros residuos pueden
                             reducir la radiación que llega a las celdas
                             solares y afectar la generación.
@@ -539,8 +625,10 @@
 
                     <article class="condition-card">
                         <div class="condition-icon">◐</div>
-                        <h4>Sombras</h4>
-                        <p>
+                        <h4 data-i18n="conditions.shade.title">
+                            Sombras
+                        </h4>
+                        <p data-i18n="conditions.shade.description">
                             Árboles, edificios u objetos cercanos pueden
                             producir sombras y reducir el rendimiento.
                             Por ello analizamos la ubicación antes de
@@ -550,8 +638,10 @@
 
                     <article class="condition-card">
                         <div class="condition-icon">♨</div>
-                        <h4>Temperaturas altas</h4>
-                        <p>
+                        <h4 data-i18n="conditions.heat.title">
+                            Temperaturas altas
+                        </h4>
+                        <p data-i18n="conditions.heat.description">
                             Los paneles necesitan radiación solar, pero
                             temperaturas elevadas pueden reducir
                             temporalmente su eficiencia eléctrica.
@@ -560,8 +650,10 @@
 
                     <article class="condition-card">
                         <div class="condition-icon">⚙</div>
-                        <h4>Mantenimiento</h4>
-                        <p>
+                        <h4 data-i18n="conditions.maintenance.title">
+                            Mantenimiento
+                        </h4>
+                        <p data-i18n="conditions.maintenance.description">
                             La inspección periódica, limpieza cuando sea
                             necesaria y monitoreo ayudan a conservar el
                             desempeño del sistema.
@@ -572,16 +664,21 @@
 
             </div>
 
-            <!-- PREGUNTAS FRECUENTES -->
+            <!-- FAQ -->
 
             <div class="solar-faq">
 
                 <div class="faq-heading">
 
-                    <span>PREGUNTAS FRECUENTES</span>
-                    <h3>Todo lo que necesitas saber</h3>
+                    <span data-i18n="faq.eyebrow">
+                        PREGUNTAS FRECUENTES
+                    </span>
 
-                    <p>
+                    <h3 data-i18n="faq.title">
+                        Todo lo que necesitas saber
+                    </h3>
+
+                    <p data-i18n="faq.description">
                         Selecciona una pregunta para conocer la respuesta.
                     </p>
 
@@ -591,28 +688,31 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Solaris Energy realiza el trámite con CFE?</span>
+                            <span data-i18n="faq.q1">
+                                ¿Solaris Energy realiza el trámite con CFE?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a1">
                                 Solaris Energy acompaña la integración de
                                 la información necesaria y la gestión del
                                 proceso de interconexión. La aprobación y
                                 los procedimientos correspondientes dependen
-                                de CFE y de las características de cada
-                                proyecto.
+                                de CFE y de las características de cada proyecto.
                             </p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Necesito cambiar mi medidor?</span>
+                            <span data-i18n="faq.q2">
+                                ¿Necesito cambiar mi medidor?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a2">
                                 Un proyecto de generación distribuida
                                 interconectado requiere un esquema de medición
                                 compatible. El equipo correspondiente depende
@@ -623,11 +723,13 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Qué pasa con la energía que no consumo?</span>
+                            <span data-i18n="faq.q3">
+                                ¿Qué pasa con la energía que no consumo?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a3">
                                 Cuando tu sistema genera más energía de la
                                 que consumes en ese momento, el excedente
                                 puede entregarse a la red. Su tratamiento
@@ -639,11 +741,13 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Los paneles generan energía durante la noche?</span>
+                            <span data-i18n="faq.q4">
+                                ¿Los paneles generan energía durante la noche?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a4">
                                 No. Los paneles fotovoltaicos requieren
                                 radiación solar. En un sistema interconectado
                                 convencional sin baterías, durante la noche
@@ -654,11 +758,13 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Funcionan cuando está nublado?</span>
+                            <span data-i18n="faq.q5">
+                                ¿Funcionan cuando está nublado?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a5">
                                 Sí. Los paneles pueden generar electricidad
                                 con radiación solar difusa, aunque normalmente
                                 producen menos energía que bajo condiciones
@@ -669,11 +775,13 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Qué pasa durante varios días de lluvia?</span>
+                            <span data-i18n="faq.q6">
+                                ¿Qué pasa durante varios días de lluvia?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a6">
                                 La generación puede disminuir debido a la
                                 menor radiación disponible. Si el sistema
                                 no produce suficiente energía, la red
@@ -685,11 +793,13 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Qué pasa si los paneles están sucios?</span>
+                            <span data-i18n="faq.q7">
+                                ¿Qué pasa si los paneles están sucios?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a7">
                                 Una acumulación importante de polvo, tierra
                                 u otros residuos puede reducir la radiación
                                 que reciben las celdas y afectar la
@@ -701,29 +811,30 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>
+                            <span data-i18n="faq.q8">
                                 ¿Me quedaré sin electricidad si los paneles
                                 producen poco?
                             </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a8">
                                 En una instalación convencional
                                 interconectada, la red complementa la
-                                energía que el sistema solar no pueda
-                                producir.
+                                energía que el sistema solar no pueda producir.
                             </p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>¿Los paneles necesitan mantenimiento?</span>
+                            <span data-i18n="faq.q9">
+                                ¿Los paneles necesitan mantenimiento?
+                            </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a9">
                                 Sí requieren inspecciones periódicas.
                                 Solaris Energy ofrece planes de mantenimiento
                                 para revisar paneles, conexiones y desempeño
@@ -734,18 +845,16 @@
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>
-                                ¿Cómo puedo saber cuánto está generando mi
-                                sistema?
+                            <span data-i18n="faq.q10">
+                                ¿Cómo puedo saber cuánto está generando mi sistema?
                             </span>
                             <b class="faq-plus">+</b>
                         </summary>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq.a10">
                                 Solaris Connect está diseñado para mostrar
                                 indicadores de generación, consumo y
-                                rendimiento del sistema desde dispositivos
-                                móviles.
+                                rendimiento del sistema desde dispositivos móviles.
                             </p>
                         </div>
                     </details>
@@ -763,12 +872,20 @@
         <section id="paneles" class="section panels-section">
 
             <div class="section-heading">
-                <span>TECNOLOGÍA SOLAR</span>
-                <h2>Paneles para cada necesidad</h2>
-                <p>
+
+                <span data-i18n="panels.eyebrow">
+                    TECNOLOGÍA SOLAR
+                </span>
+
+                <h2 data-i18n="panels.title">
+                    Paneles para cada necesidad
+                </h2>
+
+                <p data-i18n="panels.description">
                     Seleccionamos soluciones de alto desempeño para
                     proyectos residenciales y comerciales.
                 </p>
+
             </div>
 
             <div class="panels-grid">
@@ -780,51 +897,85 @@
                     </div>
 
                     <div class="panel-body">
-                        <span class="card-label">RESIDENCIAL</span>
-                        <h3>Solaris Essential</h3>
-                        <div class="power">450 <small>W</small></div>
 
-                        <p>
+                        <span class="card-label" data-i18n="panels.essential.label">
+                            RESIDENCIAL
+                        </span>
+
+                        <h3>Solaris Essential</h3>
+
+                        <div class="power">
+                            450 <small>W</small>
+                        </div>
+
+                        <p data-i18n="panels.essential.description">
                             Una solución eficiente para hogares que desean
                             comenzar su transición hacia la energía solar.
                         </p>
 
                         <ul>
-                            <li>Alta eficiencia energética</li>
-                            <li>Diseño residencial</li>
-                            <li>Excelente relación costo-beneficio</li>
+                            <li data-i18n="panels.essential.item1">
+                                Alta eficiencia energética
+                            </li>
+                            <li data-i18n="panels.essential.item2">
+                                Diseño residencial
+                            </li>
+                            <li data-i18n="panels.essential.item3">
+                                Excelente relación costo-beneficio
+                            </li>
                         </ul>
 
-                        <a href="#cotizar">Cotizar proyecto →</a>
+                        <a href="#cotizar" data-i18n="panels.quote">
+                            Cotizar proyecto →
+                        </a>
+
                     </div>
 
                 </article>
 
                 <article class="panel-card featured-panel">
 
-                    <span class="recommended">RECOMENDADO</span>
+                    <span class="recommended" data-i18n="common.recommended">
+                        RECOMENDADO
+                    </span>
 
                     <div class="panel-image">
                         <img src="images/panelsolar.png" alt="Solaris Performance">
                     </div>
 
                     <div class="panel-body">
-                        <span class="card-label">ALTO RENDIMIENTO</span>
-                        <h3>Solaris Performance</h3>
-                        <div class="power">585 <small>W</small></div>
 
-                        <p>
+                        <span class="card-label" data-i18n="panels.performance.label">
+                            ALTO RENDIMIENTO
+                        </span>
+
+                        <h3>Solaris Performance</h3>
+
+                        <div class="power">
+                            585 <small>W</small>
+                        </div>
+
+                        <p data-i18n="panels.performance.description">
                             Nuestra configuración principal para proyectos
                             que requieren mayor producción energética.
                         </p>
 
                         <ul>
-                            <li>Mayor generación por panel</li>
-                            <li>Ideal para residencias y PyMEs</li>
-                            <li>Optimización del espacio disponible</li>
+                            <li data-i18n="panels.performance.item1">
+                                Mayor generación por panel
+                            </li>
+                            <li data-i18n="panels.performance.item2">
+                                Ideal para residencias y PyMEs
+                            </li>
+                            <li data-i18n="panels.performance.item3">
+                                Optimización del espacio disponible
+                            </li>
                         </ul>
 
-                        <a href="#cotizar">Cotizar proyecto →</a>
+                        <a href="#cotizar" data-i18n="panels.quote">
+                            Cotizar proyecto →
+                        </a>
+
                     </div>
 
                 </article>
@@ -836,22 +987,38 @@
                     </div>
 
                     <div class="panel-body">
-                        <span class="card-label">COMERCIAL</span>
-                        <h3>Solaris Pro</h3>
-                        <div class="power">700 <small>W</small></div>
 
-                        <p>
+                        <span class="card-label" data-i18n="panels.pro.label">
+                            COMERCIAL
+                        </span>
+
+                        <h3>Solaris Pro</h3>
+
+                        <div class="power">
+                            700 <small>W</small>
+                        </div>
+
+                        <p data-i18n="panels.pro.description">
                             Diseñado para instalaciones de mayor capacidad
                             y proyectos comerciales de alto consumo.
                         </p>
 
                         <ul>
-                            <li>Potencia superior</li>
-                            <li>Aplicaciones comerciales</li>
-                            <li>Alta densidad energética</li>
+                            <li data-i18n="panels.pro.item1">
+                                Potencia superior
+                            </li>
+                            <li data-i18n="panels.pro.item2">
+                                Aplicaciones comerciales
+                            </li>
+                            <li data-i18n="panels.pro.item3">
+                                Alta densidad energética
+                            </li>
                         </ul>
 
-                        <a href="#cotizar">Cotizar proyecto →</a>
+                        <a href="#cotizar" data-i18n="panels.quote">
+                            Cotizar proyecto →
+                        </a>
+
                     </div>
 
                 </article>
@@ -867,12 +1034,20 @@
         <section id="proyectos" class="section projects-section">
 
             <div class="section-heading">
-                <span>SOLUCIONES A TU MEDIDA</span>
-                <h2>Proyectos solares</h2>
-                <p>
+
+                <span data-i18n="projects.eyebrow">
+                    SOLUCIONES A TU MEDIDA
+                </span>
+
+                <h2 data-i18n="projects.title">
+                    Proyectos solares
+                </h2>
+
+                <p data-i18n="projects.description">
                     Diseñamos soluciones de acuerdo con el consumo,
                     características y objetivos de cada cliente.
                 </p>
+
             </div>
 
             <div class="projects-grid">
@@ -880,23 +1055,30 @@
                 <article class="project-card residential-card">
 
                     <span class="project-number">01</span>
-                    <div class="project-icon">🏠</div>
-                    <span class="card-label">HOGARES</span>
-                    <h3>Residencial</h3>
 
-                    <p>
+                    <div class="project-icon">🏠</div>
+
+                    <span class="card-label" data-i18n="projects.home.label">
+                        HOGARES
+                    </span>
+
+                    <h3 data-i18n="projects.home.title">
+                        Residencial
+                    </h3>
+
+                    <p data-i18n="projects.home.description">
                         Convierte tu hogar en un espacio energéticamente
                         eficiente y reduce tu dependencia de la red.
                     </p>
 
                     <ul>
-                        <li>Evaluación de consumo</li>
-                        <li>Dimensionamiento personalizado</li>
-                        <li>Instalación profesional</li>
-                        <li>Monitoreo del sistema</li>
+                        <li data-i18n="projects.home.item1">Evaluación de consumo</li>
+                        <li data-i18n="projects.home.item2">Dimensionamiento personalizado</li>
+                        <li data-i18n="projects.home.item3">Instalación profesional</li>
+                        <li data-i18n="projects.home.item4">Monitoreo del sistema</li>
                     </ul>
 
-                    <a href="#cotizar" class="project-link" data-project="residencial">
+                    <a href="#cotizar" class="project-link" data-project="residencial" data-i18n="projects.home.quote">
                         Cotizar residencia →
                     </a>
 
@@ -905,23 +1087,31 @@
                 <article class="project-card business-card">
 
                     <span class="project-number">02</span>
-                    <div class="project-icon">🏢</div>
-                    <span class="card-label yellow">NEGOCIOS</span>
-                    <h3>PyMEs</h3>
 
-                    <p>
+                    <div class="project-icon">🏢</div>
+
+                    <span class="card-label yellow" data-i18n="projects.business.label">
+                        NEGOCIOS
+                    </span>
+
+                    <h3 data-i18n="projects.business.title">
+                        PyMEs
+                    </h3>
+
+                    <p data-i18n="projects.business.description">
                         Soluciones solares para pequeñas y medianas empresas
                         que buscan controlar sus costos energéticos.
                     </p>
 
                     <ul>
-                        <li>Análisis de consumo empresarial</li>
-                        <li>Diseño escalable</li>
-                        <li>Equipamiento de alto rendimiento</li>
-                        <li>Soporte y mantenimiento</li>
+                        <li data-i18n="projects.business.item1">Análisis de consumo empresarial</li>
+                        <li data-i18n="projects.business.item2">Diseño escalable</li>
+                        <li data-i18n="projects.business.item3">Equipamiento de alto rendimiento</li>
+                        <li data-i18n="projects.business.item4">Soporte y mantenimiento</li>
                     </ul>
 
-                    <a href="#cotizar" class="project-link yellow" data-project="pyme">
+                    <a href="#cotizar" class="project-link yellow" data-project="pyme"
+                        data-i18n="projects.business.quote">
                         Cotizar negocio →
                     </a>
 
@@ -930,13 +1120,33 @@
             </div>
 
             <div class="simple-process">
-                <div><strong>01</strong><span>Analizamos</span></div>
+
+                <div>
+                    <strong>01</strong>
+                    <span data-i18n="projects.process1">Analizamos</span>
+                </div>
+
                 <b>→</b>
-                <div><strong>02</strong><span>Diseñamos</span></div>
+
+                <div>
+                    <strong>02</strong>
+                    <span data-i18n="projects.process2">Diseñamos</span>
+                </div>
+
                 <b>→</b>
-                <div><strong>03</strong><span>Instalamos</span></div>
+
+                <div>
+                    <strong>03</strong>
+                    <span data-i18n="projects.process3">Instalamos</span>
+                </div>
+
                 <b>→</b>
-                <div><strong>04</strong><span>Monitoreamos</span></div>
+
+                <div>
+                    <strong>04</strong>
+                    <span data-i18n="projects.process4">Monitoreamos</span>
+                </div>
+
             </div>
 
         </section>
@@ -948,61 +1158,79 @@
         <section id="operaciones" class="operations-section">
 
             <div class="dark-heading">
+
                 <span>SUPPLY CHAIN</span>
-                <h2>¿Cómo operamos?</h2>
-                <p>
+
+                <h2 data-i18n="operations.title">
+                    ¿Cómo operamos?
+                </h2>
+
+                <p data-i18n="operations.description">
                     Nuestra cadena de suministro integra selección de
                     tecnología, logística, ensamble e instalación para
                     entregar una solución solar completa.
                 </p>
+
             </div>
 
             <div class="supply-chain">
 
                 <div class="supply-step">
                     <div class="step-circle">🌎 <span>01</span></div>
-                    <h3>Selección</h3>
-                    <p>Evaluamos fabricantes y tecnologías.</p>
+                    <h3 data-i18n="operations.step1.title">Selección</h3>
+                    <p data-i18n="operations.step1.description">
+                        Evaluamos fabricantes y tecnologías.
+                    </p>
                 </div>
 
                 <b>→</b>
 
                 <div class="supply-step">
                     <div class="step-circle">🚢 <span>02</span></div>
-                    <h3>Importación</h3>
-                    <p>Optimizamos rutas y costos logísticos.</p>
+                    <h3 data-i18n="operations.step2.title">Importación</h3>
+                    <p data-i18n="operations.step2.description">
+                        Optimizamos rutas y costos logísticos.
+                    </p>
                 </div>
 
                 <b>→</b>
 
                 <div class="supply-step">
                     <div class="step-circle">📦 <span>03</span></div>
-                    <h3>Recepción</h3>
-                    <p>Verificamos componentes y calidad.</p>
+                    <h3 data-i18n="operations.step3.title">Recepción</h3>
+                    <p data-i18n="operations.step3.description">
+                        Verificamos componentes y calidad.
+                    </p>
                 </div>
 
                 <b>→</b>
 
                 <div class="supply-step">
                     <div class="step-circle">⚙ <span>04</span></div>
-                    <h3>Integración</h3>
-                    <p>Preparamos la solución para cada proyecto.</p>
+                    <h3 data-i18n="operations.step4.title">Integración</h3>
+                    <p data-i18n="operations.step4.description">
+                        Preparamos la solución para cada proyecto.
+                    </p>
                 </div>
 
                 <b>→</b>
 
                 <div class="supply-step">
                     <div class="step-circle">🚚 <span>05</span></div>
-                    <h3>Distribución</h3>
-                    <p>Coordinamos entrega al sitio del cliente.</p>
+                    <h3 data-i18n="operations.step5.title">Distribución</h3>
+                    <p data-i18n="operations.step5.description">
+                        Coordinamos entrega al sitio del cliente.
+                    </p>
                 </div>
 
                 <b>→</b>
 
                 <div class="supply-step">
                     <div class="step-circle">☀ <span>06</span></div>
-                    <h3>Instalación</h3>
-                    <p>Implementamos y ponemos en operación el sistema.</p>
+                    <h3 data-i18n="operations.step6.title">Instalación</h3>
+                    <p data-i18n="operations.step6.description">
+                        Implementamos y ponemos en operación el sistema.
+                    </p>
                 </div>
 
             </div>
@@ -1010,23 +1238,35 @@
             <div class="operations-summary">
 
                 <div>
-                    <span>MODELO OPERATIVO</span>
+                    <span data-i18n="operations.model">
+                        MODELO OPERATIVO
+                    </span>
                     <h3>Global sourcing.<br>Local execution.</h3>
                 </div>
 
                 <div>
                     <strong>China</strong>
-                    <span>Sourcing competitivo</span>
+                    <span data-i18n="operations.china">
+                        Sourcing competitivo
+                    </span>
                 </div>
 
                 <div>
-                    <strong>Norteamérica</strong>
-                    <span>Alianzas estratégicas</span>
+                    <strong data-i18n="operations.northamerica.title">
+                        Norteamérica (E.U. / Canadá)
+                    </strong>
+                    <span data-i18n="operations.northamerica.description">
+                        Alianzas estratégicas
+                    </span>
                 </div>
 
                 <div>
-                    <strong>México</strong>
-                    <span>Integración e instalación</span>
+                    <strong data-i18n="operations.mexico.title">
+                        México
+                    </strong>
+                    <span data-i18n="operations.mexico.description">
+                        Integración e instalación
+                    </span>
                 </div>
 
             </div>
@@ -1034,33 +1274,41 @@
         </section>
 
         <!-- =================================================
-     MANTENIMIENTO
-================================================== -->
+             MANTENIMIENTO
+        ================================================== -->
 
         <section id="mantenimiento" class="section maintenance-section">
 
             <div class="section-heading">
-                <span>PROTEGE TU INVERSIÓN</span>
-                <h2>Pólizas de mantenimiento</h2>
-                <p>
+
+                <span data-i18n="maintenance.eyebrow">
+                    PROTEGE TU INVERSIÓN
+                </span>
+
+                <h2 data-i18n="maintenance.title">
+                    Pólizas de mantenimiento
+                </h2>
+
+                <p data-i18n="maintenance.description">
                     Mantén tu sistema solar operando de manera eficiente
                     mediante planes preventivos y de seguimiento.
                 </p>
+
             </div>
 
             <div class="maintenance-grid">
-
-                <!-- SOLARIS CARE -->
 
                 <article class="maintenance-card">
 
                     <div class="maintenance-icon">☀</div>
 
-                    <span class="card-label">PLAN ESENCIAL</span>
+                    <span class="card-label" data-i18n="maintenance.care.label">
+                        PLAN ESENCIAL
+                    </span>
 
                     <h3>Solaris Care</h3>
 
-                    <p>
+                    <p data-i18n="maintenance.care.description">
                         Mantenimiento preventivo para conservar el desempeño
                         de tu sistema.
                     </p>
@@ -1068,42 +1316,50 @@
                     <div class="maintenance-plan-details">
 
                         <div class="maintenance-detail">
-                            <span>VIGENCIA</span>
-                            <strong>6 meses</strong>
+                            <span data-i18n="maintenance.validity">VIGENCIA</span>
+                            <strong data-i18n="maintenance.care.validity">
+                                6 meses
+                            </strong>
                         </div>
 
                         <div class="maintenance-detail">
-                            <span>FRECUENCIA</span>
-                            <strong>1 servicio preventivo</strong>
+                            <span data-i18n="maintenance.frequency">FRECUENCIA</span>
+                            <strong data-i18n="maintenance.care.frequency">
+                                1 servicio preventivo
+                            </strong>
                         </div>
 
                     </div>
 
                     <ul>
-                        <li>Inspección general</li>
-                        <li>Revisión visual de paneles</li>
-                        <li>Verificación de conexiones</li>
-                        <li>Reporte de servicio</li>
-                        <li>Atención inmediata</li>
+                        <li data-i18n="maintenance.care.item1">Inspección general</li>
+                        <li data-i18n="maintenance.care.item2">Revisión visual de paneles</li>
+                        <li data-i18n="maintenance.care.item3">Verificación de conexiones</li>
+                        <li data-i18n="maintenance.care.item4">Reporte de servicio</li>
+                        <li data-i18n="maintenance.care.item5">Atención inmediata</li>
                     </ul>
 
-                    <a href="#cotizar">Solicitar información</a>
+                    <a href="#cotizar" data-i18n="maintenance.info">
+                        Solicitar información
+                    </a>
 
                 </article>
 
-                <!-- SOLARIS CARE+ -->
-
                 <article class="maintenance-card maintenance-featured">
 
-                    <span class="maintenance-badge">RECOMENDADO</span>
+                    <span class="maintenance-badge" data-i18n="common.recommended">
+                        RECOMENDADO
+                    </span>
 
                     <div class="maintenance-icon">⚙</div>
 
-                    <span class="card-label">PLAN PLUS</span>
+                    <span class="card-label" data-i18n="maintenance.plus.label">
+                        PLAN PLUS
+                    </span>
 
                     <h3>Solaris Care+</h3>
 
-                    <p>
+                    <p data-i18n="maintenance.plus.description">
                         Mayor seguimiento para sistemas residenciales
                         y comerciales.
                     </p>
@@ -1111,40 +1367,46 @@
                     <div class="maintenance-plan-details">
 
                         <div class="maintenance-detail">
-                            <span>VIGENCIA</span>
-                            <strong>12 meses</strong>
+                            <span data-i18n="maintenance.validity">VIGENCIA</span>
+                            <strong data-i18n="maintenance.plus.validity">
+                                12 meses
+                            </strong>
                         </div>
 
                         <div class="maintenance-detail">
-                            <span>FRECUENCIA</span>
-                            <strong>Cada 6 meses</strong>
+                            <span data-i18n="maintenance.frequency">FRECUENCIA</span>
+                            <strong data-i18n="maintenance.plus.frequency">
+                                Cada 6 meses
+                            </strong>
                         </div>
 
                     </div>
 
                     <ul>
-                        <li>2 servicios programados al año</li>
-                        <li>Todo lo incluido en Solaris Care</li>
-                        <li>Evaluación de generación</li>
-                        <li>Seguimiento de desempeño</li>
-                        <li>Atención prioritaria</li>
+                        <li data-i18n="maintenance.plus.item1">2 servicios programados al año</li>
+                        <li data-i18n="maintenance.plus.item2">Todo lo incluido en Solaris Care</li>
+                        <li data-i18n="maintenance.plus.item3">Evaluación de generación</li>
+                        <li data-i18n="maintenance.plus.item4">Seguimiento de desempeño</li>
+                        <li data-i18n="maintenance.plus.item5">Atención prioritaria</li>
                     </ul>
 
-                    <a href="#cotizar">Solicitar información</a>
+                    <a href="#cotizar" data-i18n="maintenance.info">
+                        Solicitar información
+                    </a>
 
                 </article>
-
-                <!-- SOLARIS BUSINESS -->
 
                 <article class="maintenance-card">
 
                     <div class="maintenance-icon">🛡</div>
 
-                    <span class="card-label">PLAN EMPRESARIAL</span>
+                    <span class="card-label" data-i18n="maintenance.business.label">
+                        PLAN EMPRESARIAL
+                    </span>
 
                     <h3>Solaris Business</h3>
 
-                    <p>
+                    <p data-i18n="maintenance.business.description">
                         Seguimiento orientado a sistemas comerciales y
                         proyectos de mayor capacidad.
                     </p>
@@ -1152,26 +1414,32 @@
                     <div class="maintenance-plan-details">
 
                         <div class="maintenance-detail">
-                            <span>VIGENCIA</span>
-                            <strong>12 meses</strong>
+                            <span data-i18n="maintenance.validity">VIGENCIA</span>
+                            <strong data-i18n="maintenance.business.validity">
+                                12 meses
+                            </strong>
                         </div>
 
                         <div class="maintenance-detail">
-                            <span>FRECUENCIA</span>
-                            <strong>Cada 3 meses</strong>
+                            <span data-i18n="maintenance.frequency">FRECUENCIA</span>
+                            <strong data-i18n="maintenance.business.frequency">
+                                Cada 3 meses
+                            </strong>
                         </div>
 
                     </div>
 
                     <ul>
-                        <li>4 servicios programados al año</li>
-                        <li>Programa preventivo</li>
-                        <li>Evaluación de rendimiento</li>
-                        <li>Reportes de seguimiento</li>
-                        <li>Soporte especializado</li>
+                        <li data-i18n="maintenance.business.item1">4 servicios programados al año</li>
+                        <li data-i18n="maintenance.business.item2">Programa preventivo</li>
+                        <li data-i18n="maintenance.business.item3">Evaluación de rendimiento</li>
+                        <li data-i18n="maintenance.business.item4">Reportes de seguimiento</li>
+                        <li data-i18n="maintenance.business.item5">Soporte especializado</li>
                     </ul>
 
-                    <a href="#cotizar">Solicitar información</a>
+                    <a href="#cotizar" data-i18n="maintenance.info">
+                        Solicitar información
+                    </a>
 
                 </article>
 
@@ -1180,20 +1448,28 @@
         </section>
 
         <!-- =================================================
-             COTIZADOR
-        ================================================== -->
+     COTIZADOR
+================================================== -->
 
         <section id="cotizar" class="quote-section">
 
             <div class="quote-container">
 
+                <!-- =================================================
+             COLUMNA IZQUIERDA - WORKFLOW
+        ================================================== -->
+
                 <div class="quote-intro">
 
-                    <span class="quote-label">COTIZADOR SOLAR</span>
+                    <span class="quote-label" data-i18n="quote.eyebrow">
+                        COTIZADOR SOLAR
+                    </span>
 
-                    <h2>Descubre el sistema ideal para ti.</h2>
+                    <h2 data-i18n="quote.title">
+                        Descubre el sistema ideal para ti.
+                    </h2>
 
-                    <p>
+                    <p data-i18n="quote.description">
                         Ingresa tu consumo de energía y selecciona el tipo
                         de proyecto. Nuestro simulador realizará una
                         estimación inicial del sistema recomendado.
@@ -1201,129 +1477,293 @@
 
                     <div class="quote-steps">
 
-                        <div>
-                            <span>01</span>
-                            <div>
-                                <strong>Ingresa tu consumo</strong>
-                                <p>Utiliza el consumo en kWh de tu recibo.</p>
-                            </div>
-                        </div>
+                        <!-- =========================================
+                     PASO 01
+                ========================================== -->
 
-                        <div>
-                            <span>02</span>
-                            <div>
-                                <strong>Selecciona tu proyecto</strong>
-                                <p>Residencial o PyME.</p>
-                            </div>
-                        </div>
+                        <div class="quote-step quote-step-consumption">
 
-                        <div>
-                            <span>03</span>
-                            <div>
-                                <strong>Obtén tu estimación</strong>
-                                <p>Paneles, capacidad, generación y costo.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="quote-card">
-
-                    <span class="card-label">SIMULACIÓN</span>
-                    <h3>Calcula tu proyecto</h3>
-
-                    <p class="quote-card-description">
-                        Completa la información para generar una
-                        recomendación preliminar.
-                    </p>
-
-                    <form id="solarQuoteForm">
-
-                        <div class="form-group">
-
-                            <div class="form-title">
-                                <label for="energyConsumption">
-                                    Consumo bimestral
-                                </label>
-                                <span>RECIBO CFE</span>
+                            <div class="quote-step-marker">
+                                <span class="quote-step-number">
+                                    01
+                                </span>
                             </div>
 
-                            <div class="energy-input">
-                                <input id="energyConsumption" type="number" min="1" step="1" placeholder="Ej. 1200"
-                                    required>
-                                <span>kWh</span>
-                            </div>
+                            <div class="quote-step-content">
 
-                            <small>
-                                Ingresa los kWh consumidos durante un periodo
-                                aproximado de dos meses.
-                            </small>
+                                <strong data-i18n="quote.step1.title">
+                                    Ingresa tu consumo
+                                </strong>
 
-                        </div>
+                                <p data-i18n="quote.step1.description">
+                                    Utiliza el consumo en kWh de tu recibo.
+                                </p>
 
-                        <div class="form-group">
+                                <!-- RECIBO CFE -->
 
-                            <div class="form-title">
-                                <label>Tipo de proyecto</label>
-                            </div>
+                                <div class="cfe-receipt-example">
 
-                            <div class="project-selector">
-
-                                <label class="project-option">
-                                    <input type="radio" name="projectType" value="residencial" checked>
-                                    <span class="project-option-box">
-                                        <b>🏠</b>
-                                        <strong>Residencial</strong>
-                                        <small>Casa habitación</small>
+                                    <span class="cfe-receipt-arrow">
+                                        ↓
                                     </span>
-                                </label>
 
-                                <label class="project-option">
-                                    <input type="radio" name="projectType" value="pyme">
-                                    <span class="project-option-box">
-                                        <b>🏢</b>
-                                        <strong>Negocio / PyME</strong>
-                                        <small>Uso comercial</small>
-                                    </span>
-                                </label>
+                                    <img src="images/cfe.png" alt="Ejemplo de recibo CFE"
+                                        class="cfe-receipt-image">
 
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <div class="form-title">
-                                <label for="cfeRate">Tarifa eléctrica</label>
-                            </div>
-
-                            <div class="select-wrapper">
-                                <select id="cfeRate" required></select>
-                            </div>
-
-                            <div class="rate-information">
-
-                                <span class="info-circle">i</span>
-
-                                <div>
-                                    <strong id="rateName">Tarifa doméstica</strong>
-                                    <p id="rateDescription">
-                                        Selecciona la tarifa indicada en tu
-                                        recibo de electricidad.
-                                    </p>
                                 </div>
 
                             </div>
 
                         </div>
 
-                        <button type="submit" class="calculate-button">
-                            Calcular proyecto solar
-                        </button>
+                        <!-- =========================================
+                     PASO 02
+                ========================================== -->
 
-                        <p class="disclaimer">
+                        <div class="quote-step quote-step-project">
+
+                            <div class="quote-step-marker">
+                                <span class="quote-step-number">
+                                    02
+                                </span>
+                            </div>
+
+                            <div class="quote-step-content">
+
+                                <strong data-i18n="quote.step2.title">
+                                    Selecciona tu proyecto
+                                </strong>
+
+                                <p data-i18n="quote.step2.description">
+                                    Residencial o PyME.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- =========================================
+                     PASO 03
+                ========================================== -->
+
+                        <div class="quote-step quote-step-calculate">
+
+                            <div class="quote-step-marker">
+                                <span class="quote-step-number">
+                                    03
+                                </span>
+                            </div>
+
+                            <div class="quote-step-content">
+
+                                <strong data-i18n="quote.step3.title">
+                                    Obtén tu estimación
+                                </strong>
+
+                                <p data-i18n="quote.step3.description">
+                                    Paneles, capacidad, generación y costo.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- FIN COLUMNA IZQUIERDA -->
+
+
+                <!-- =================================================
+             COLUMNA DERECHA - FORMULARIO
+        ================================================== -->
+
+                <div class="quote-card">
+
+                    <span class="card-label" data-i18n="quote.simulation">
+                        SIMULACIÓN
+                    </span>
+
+                    <h3 data-i18n="quote.calculate.title">
+                        Calcula tu proyecto
+                    </h3>
+
+                    <p class="quote-card-description" data-i18n="quote.calculate.description">
+                        Completa la información para generar una
+                        recomendación preliminar.
+                    </p>
+
+                    <form id="solarQuoteForm">
+
+                        <!-- =========================================
+                     TARGET 01
+                     CONSUMO BIMESTRAL
+                ========================================== -->
+
+                        <div class="form-group workflow-target workflow-target-consumption"
+                            id="workflowConsumptionTarget">
+
+                            <div class="form-title">
+
+                                <label for="energyConsumption" data-i18n="quote.consumption">
+                                    Consumo bimestral
+                                </label>
+
+                                <span>
+                                    RECIBO CFE
+                                </span>
+
+                            </div>
+
+                            <div class="energy-input">
+
+                                <input id="energyConsumption" type="number" min="1" step="1" placeholder="Ej. 1200"
+                                    data-i18n-placeholder="quote.placeholder" required>
+
+                                <span>
+                                    kWh
+                                </span>
+
+                            </div>
+
+                            <small data-i18n="quote.consumption.help">
+                                Ingresa los kWh consumidos durante un periodo
+                                aproximado de dos meses.
+                            </small>
+
+                        </div>
+
+
+                        <!-- =========================================
+                     TARGET 02
+                     TIPO DE PROYECTO
+                ========================================== -->
+
+                        <div class="form-group workflow-target workflow-target-project" id="workflowProjectTarget">
+
+                            <div class="form-title">
+
+                                <label data-i18n="quote.projectType">
+                                    Tipo de proyecto
+                                </label>
+
+                            </div>
+
+                            <div class="project-selector">
+
+                                <!-- RESIDENCIAL -->
+
+                                <label class="project-option">
+
+                                    <input type="radio" name="projectType" value="residencial" checked>
+
+                                    <span class="project-option-box">
+
+                                        <b>
+                                            🏠
+                                        </b>
+
+                                        <strong data-i18n="quote.residential">
+                                            Residencial
+                                        </strong>
+
+                                        <small data-i18n="quote.residential.description">
+                                            Casa habitación
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+
+                                <!-- PYME -->
+
+                                <label class="project-option">
+
+                                    <input type="radio" name="projectType" value="pyme">
+
+                                    <span class="project-option-box">
+
+                                        <b>
+                                            🏢
+                                        </b>
+
+                                        <strong data-i18n="quote.business">
+                                            Negocio / PyME
+                                        </strong>
+
+                                        <small data-i18n="quote.business.description">
+                                            Uso comercial
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================================
+                     TARIFA ELÉCTRICA
+                ========================================== -->
+
+                        <div class="form-group">
+
+                            <div class="form-title">
+
+                                <label for="cfeRate" data-i18n="quote.rate">
+                                    Tarifa eléctrica
+                                </label>
+
+                            </div>
+
+                            <div class="select-wrapper">
+
+                                <select id="cfeRate" required>
+                                </select>
+
+                            </div>
+
+                            <div class="rate-information">
+
+                                <span class="info-circle">
+                                    i
+                                </span>
+
+                                <div>
+
+                                    <strong id="rateName">
+                                        Tarifa doméstica
+                                    </strong>
+
+                                    <p id="rateDescription">
+                                        Selecciona la tarifa indicada en tu
+                                        recibo de electricidad.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================================
+                     TARGET 03
+                     BOTÓN CALCULAR
+                ========================================== -->
+
+                        <div class="workflow-target workflow-target-calculate" id="workflowCalculateTarget">
+
+                            <button type="submit" class="calculate-button" data-i18n="quote.calculate.button">
+                                Calcular proyecto solar
+                            </button>
+
+                        </div>
+
+                        <p class="disclaimer" data-i18n="quote.disclaimer">
                             Esta herramienta proporciona únicamente una
                             estimación preliminar. La propuesta final requiere
                             una evaluación técnica.
@@ -1332,155 +1772,361 @@
                     </form>
 
                 </div>
+                <!-- FIN COLUMNA DERECHA -->
 
             </div>
+            <!-- FIN quote-container -->
+
+
+            <!-- =================================================
+         PROCESAMIENTO
+    ================================================== -->
 
             <div id="quoteProcessing" class="quote-processing" hidden>
 
-                <div class="loader">☀</div>
-                <span>SOLARIS INTELLIGENCE</span>
-                <h3>Procesando tu proyecto...</h3>
+                <div class="loader">
+                    ☀
+                </div>
 
-                <p>
+                <span>
+                    SOLARIS INTELLIGENCE
+                </span>
+
+                <h3 data-i18n="quote.processing.title">
+                    Procesando tu proyecto...
+                </h3>
+
+                <p data-i18n="quote.processing.description">
                     Analizando consumo, capacidad y generación estimada.
                 </p>
 
             </div>
 
+
+            <!-- =================================================
+         RESULTADOS
+    ================================================== -->
+
             <div id="quoteResults" class="quote-results" hidden>
 
                 <div class="results-heading">
-                    <span>RECOMENDACIÓN PRELIMINAR</span>
-                    <h3>Tu proyecto Solaris</h3>
-                    <p id="resultDescription">Resultado de la simulación.</p>
+
+                    <span data-i18n="results.eyebrow">
+                        RECOMENDACIÓN PRELIMINAR
+                    </span>
+
+                    <h3 data-i18n="results.title">
+                        Tu proyecto Solaris
+                    </h3>
+
+                    <p id="resultDescription">
+                        Resultado de la simulación.
+                    </p>
+
                 </div>
+
+
+                <!-- RESULTADOS PRINCIPALES -->
 
                 <div class="results-grid">
 
                     <div>
-                        <span>PANELES</span>
-                        <strong id="resultPanels">0</strong>
-                        <small>Solaris Performance 585W</small>
+
+                        <span data-i18n="results.panels">
+                            PANELES
+                        </span>
+
+                        <strong id="resultPanels">
+                            0
+                        </strong>
+
+                        <small>
+                            Solaris Performance 585W
+                        </small>
+
                     </div>
 
-                    <div>
-                        <span>CAPACIDAD</span>
-                        <strong id="resultCapacity">0 kWp</strong>
-                        <small>Capacidad instalada</small>
-                    </div>
 
                     <div>
-                        <span>INVERSIÓN</span>
-                        <strong id="resultInvestment">$0</strong>
-                        <small>Estimación del proyecto</small>
+
+                        <span data-i18n="results.capacity">
+                            CAPACIDAD
+                        </span>
+
+                        <strong id="resultCapacity">
+                            0 kWp
+                        </strong>
+
+                        <small data-i18n="results.capacity.description">
+                            Capacidad instalada
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <span data-i18n="results.investment">
+                            INVERSIÓN
+                        </span>
+
+                        <strong id="resultInvestment">
+                            $0
+                        </strong>
+
+                        <small data-i18n="results.investment.description">
+                            Estimación del proyecto
+                        </small>
+
                     </div>
 
                 </div>
+
+
+                <!-- RESUMEN DEL PROYECTO -->
 
                 <div class="project-result-summary">
 
                     <div>
-                        <span>CONSUMO ANUAL</span>
-                        <strong id="resultAnnualConsumption">0</strong>
-                        <small>kWh estimados</small>
+
+                        <span data-i18n="results.annualConsumption">
+                            CONSUMO ANUAL
+                        </span>
+
+                        <strong id="resultAnnualConsumption">
+                            0
+                        </strong>
+
+                        <small data-i18n="results.estimatedKwh">
+                            kWh estimados
+                        </small>
+
                     </div>
 
-                    <div>
-                        <span>GENERACIÓN ANUAL</span>
-                        <strong id="resultAnnualGeneration">0</strong>
-                        <small>kWh estimados</small>
-                    </div>
 
                     <div>
-                        <span>COBERTURA</span>
-                        <strong id="resultCoverage">0%</strong>
-                        <small>del consumo estimado</small>
+
+                        <span data-i18n="results.annualGeneration">
+                            GENERACIÓN ANUAL
+                        </span>
+
+                        <strong id="resultAnnualGeneration">
+                            0
+                        </strong>
+
+                        <small data-i18n="results.estimatedKwh">
+                            kWh estimados
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <span data-i18n="results.coverage">
+                            COBERTURA
+                        </span>
+
+                        <strong id="resultCoverage">
+                            0%
+                        </strong>
+
+                        <small data-i18n="results.coverage.description">
+                            del consumo estimado
+                        </small>
+
                     </div>
 
                 </div>
+
+
+                <!-- =================================================
+             FINANCIAMIENTO
+        ================================================== -->
 
                 <div class="financing-section">
 
                     <div class="financing-header">
 
                         <div>
-                            <span>FINANCIAMIENTO</span>
-                            <h4>Planes de pago</h4>
-                            <p>
+
+                            <span data-i18n="financing.eyebrow">
+                                FINANCIAMIENTO
+                            </span>
+
+                            <h4 data-i18n="financing.title">
+                                Planes de pago
+                            </h4>
+
+                            <p data-i18n="financing.description">
                                 Ejemplo ilustrativo basado en el costo
                                 estimado del proyecto.
                             </p>
+
                         </div>
 
-                        <div class="financing-icon">$</div>
+                        <div class="financing-icon">
+                            $
+                        </div>
 
                     </div>
+
 
                     <div class="financing-grid">
 
+                        <!-- 12 MESES -->
+
                         <div class="financing-card">
-                            <span class="financing-term">PLAN 01</span>
+
+                            <span class="financing-term">
+                                PLAN 01
+                            </span>
+
                             <div class="financing-months">
-                                <strong>12</strong>
-                                <span>meses</span>
+
+                                <strong>
+                                    12
+                                </strong>
+
+                                <span data-i18n="financing.months">
+                                    meses
+                                </span>
+
                             </div>
+
                             <div class="monthly-payment">
-                                <span>Pago mensual estimado</span>
-                                <strong id="payment12">$0</strong>
+
+                                <span data-i18n="financing.monthly">
+                                    Pago mensual estimado
+                                </span>
+
+                                <strong id="payment12">
+                                    $0
+                                </strong>
+
                             </div>
-                            <small>Capital ilustrativo</small>
+
+                            <small data-i18n="financing.capital">
+                                Capital ilustrativo
+                            </small>
+
                         </div>
+
+
+                        <!-- 24 MESES -->
 
                         <div class="financing-card recommended-financing">
-                            <span class="financing-badge">POPULAR</span>
-                            <span class="financing-term">PLAN 02</span>
+
+                            <span class="financing-badge" data-i18n="financing.popular">
+                                POPULAR
+                            </span>
+
+                            <span class="financing-term">
+                                PLAN 02
+                            </span>
+
                             <div class="financing-months">
-                                <strong>24</strong>
-                                <span>meses</span>
+
+                                <strong>
+                                    24
+                                </strong>
+
+                                <span data-i18n="financing.months">
+                                    meses
+                                </span>
+
                             </div>
+
                             <div class="monthly-payment">
-                                <span>Pago mensual estimado</span>
-                                <strong id="payment24">$0</strong>
+
+                                <span data-i18n="financing.monthly">
+                                    Pago mensual estimado
+                                </span>
+
+                                <strong id="payment24">
+                                    $0
+                                </strong>
+
                             </div>
-                            <small>Capital ilustrativo</small>
+
+                            <small data-i18n="financing.capital">
+                                Capital ilustrativo
+                            </small>
+
                         </div>
 
+
+                        <!-- 36 MESES -->
+
                         <div class="financing-card">
-                            <span class="financing-term">PLAN 03</span>
+
+                            <span class="financing-term">
+                                PLAN 03
+                            </span>
+
                             <div class="financing-months">
-                                <strong>36</strong>
-                                <span>meses</span>
+
+                                <strong>
+                                    36
+                                </strong>
+
+                                <span data-i18n="financing.months">
+                                    meses
+                                </span>
+
                             </div>
+
                             <div class="monthly-payment">
-                                <span>Pago mensual estimado</span>
-                                <strong id="payment36">$0</strong>
+
+                                <span data-i18n="financing.monthly">
+                                    Pago mensual estimado
+                                </span>
+
+                                <strong id="payment36">
+                                    $0
+                                </strong>
+
                             </div>
-                            <small>Capital ilustrativo</small>
+
+                            <small data-i18n="financing.capital">
+                                Capital ilustrativo
+                            </small>
+
                         </div>
 
                     </div>
 
+
+                    <!-- AVISO FINANCIAMIENTO -->
+
                     <div class="financing-notice">
-                        <span>i</span>
-                        <p>
+
+                        <span>
+                            i
+                        </span>
+
+                        <p data-i18n="financing.notice">
                             Los pagos mostrados corresponden únicamente a una
                             división ilustrativa del capital estimado. No
                             incluyen intereses, comisiones, seguros ni otros
                             costos financieros y no constituyen una oferta
                             de crédito.
                         </p>
+
                     </div>
 
                 </div>
 
-                <button id="recalculateButton" type="button" class="recalculate-button">
+
+                <!-- RECALCULAR -->
+
+                <button id="recalculateButton" type="button" class="recalculate-button" data-i18n="quote.recalculate">
                     ↻ Realizar otra cotización
                 </button>
 
             </div>
 
         </section>
-
         <!-- =================================================
              NOSOTROS
         ================================================== -->
@@ -1491,17 +2137,21 @@
 
                 <div class="about-content">
 
-                    <span class="card-label">SOLARIS ENERGY</span>
+                    <span class="card-label">
+                        SOLARIS ENERGY
+                    </span>
 
-                    <h2>Energía inteligente con ejecución local.</h2>
+                    <h2 data-i18n="about.title">
+                        Energía inteligente con ejecución local.
+                    </h2>
 
-                    <p>
+                    <p data-i18n="about.description1">
                         Solaris Energy nace con el objetivo de facilitar
                         el acceso a tecnologías solares para hogares y
                         pequeñas y medianas empresas.
                     </p>
 
-                    <p>
+                    <p data-i18n="about.description2">
                         Nuestro modelo combina tecnología, planeación,
                         logística y servicio para ofrecer una experiencia
                         integral desde la evaluación inicial hasta el
@@ -1513,24 +2163,36 @@
                         <div>
                             <span>☀</span>
                             <div>
-                                <strong>Sustentabilidad</strong>
-                                <p>Promovemos el uso responsable de energía.</p>
+                                <strong data-i18n="about.sustainability">
+                                    Sustentabilidad
+                                </strong>
+                                <p data-i18n="about.sustainability.description">
+                                    Promovemos el uso responsable de energía.
+                                </p>
                             </div>
                         </div>
 
                         <div>
                             <span>⚙</span>
                             <div>
-                                <strong>Tecnología</strong>
-                                <p>Integramos soluciones modernas y eficientes.</p>
+                                <strong data-i18n="about.technology">
+                                    Tecnología
+                                </strong>
+                                <p data-i18n="about.technology.description">
+                                    Integramos soluciones modernas y eficientes.
+                                </p>
                             </div>
                         </div>
 
                         <div>
                             <span>🤝</span>
                             <div>
-                                <strong>Servicio</strong>
-                                <p>Acompañamos al cliente durante el proyecto.</p>
+                                <strong data-i18n="about.service">
+                                    Servicio
+                                </strong>
+                                <p data-i18n="about.service.description">
+                                    Acompañamos al cliente durante el proyecto.
+                                </p>
                             </div>
                         </div>
 
@@ -1540,11 +2202,13 @@
 
                 <div class="location-card">
 
-                    <span>NUESTRA UBICACIÓN</span>
+                    <span data-i18n="location.eyebrow">
+                        NUESTRA UBICACIÓN
+                    </span>
 
                     <h3>Monterrey,<br>Nuevo León</h3>
 
-                    <p>
+                    <p data-i18n="location.description">
                         Operación enfocada inicialmente en el norte de México.
                     </p>
 
@@ -1555,12 +2219,18 @@
                     <div class="location-details">
 
                         <div>
-                            <span>REGIÓN</span>
-                            <strong>Norte de México</strong>
+                            <span data-i18n="location.region">
+                                REGIÓN
+                            </span>
+                            <strong data-i18n="location.northMexico">
+                                Norte de México
+                            </strong>
                         </div>
 
                         <div>
-                            <span>BASE</span>
+                            <span data-i18n="location.base">
+                                BASE
+                            </span>
                             <strong>Monterrey, N.L.</strong>
                         </div>
 
@@ -1580,11 +2250,15 @@
 
             <div class="section-heading">
 
-                <span>ECOSISTEMA SOLAR</span>
+                <span data-i18n="alliances.eyebrow">
+                    ECOSISTEMA SOLAR
+                </span>
 
-                <h2>Alianzas y Certificaciones</h2>
+                <h2 data-i18n="alliances.title">
+                    Alianzas y Certificaciones
+                </h2>
 
-                <p>
+                <p data-i18n="alliances.description">
                     Trabajamos con tecnología de marcas reconocidas y
                     fortalecemos nuestro modelo mediante asociaciones
                     y certificaciones relevantes para el sector.
@@ -1595,27 +2269,75 @@
             <div class="alliance-category">
 
                 <div class="alliance-category-heading">
-                    <span>TECNOLOGÍA</span>
-                    <h3>Marcas con las que trabajamos</h3>
+                    <span data-i18n="alliances.technology">
+                        TECNOLOGÍA
+                    </span>
+                    <h3 data-i18n="alliances.brands">
+                        Marcas con las que trabajamos
+                    </h3>
                 </div>
 
                 <div class="logos-grid brands-grid">
 
-                    <div class="partner-logo"><img src="images/huawei.png" alt="Huawei"></div>
-                    <div class="partner-logo"><img src="images/trinasolar.png" alt="Trina Solar"></div>
-                    <div class="partner-logo"><img src="images/solis.png" alt="Solis"></div>
-                    <div class="partner-logo"><img src="images/enphase.png" alt="Enphase"></div>
-                    <div class="partner-logo"><img src="images/unirac.png" alt="Unirac"></div>
-                    <div class="partner-logo"><img src="images/jasolar.png" alt="JA Solar"></div>
-                    <div class="partner-logo"><img src="images/sungrow.png" alt="Sungrow"></div>
-                    <div class="partner-logo"><img src="images/canadiansolar.png" alt="Canadian Solar"></div>
-                    <div class="partner-logo"><img src="images/tesla.png" alt="Tesla"></div>
-                    <div class="partner-logo"><img src="images/risen.png" alt="Risen"></div>
-                    <div class="partner-logo"><img src="images/jinko.png" alt="Jinko Solar"></div>
-                    <div class="partner-logo"><img src="images/firstsolar.png" alt="First Solar"></div>
-                    <div class="partner-logo"><img src="images/sma.png" alt="SMA"></div>
-                    <div class="partner-logo"><img src="images/yingli.png" alt="Yingli Solar"></div>
-                    <div class="partner-logo"><img src="images/hanwha.png" alt="Hanwha"></div>
+                    <div class="partner-logo">
+                        <img src="images/huawei.png" alt="Huawei">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/trinasolar.png" alt="Trina Solar">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/solis.png" alt="Solis">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/enphase.png" alt="Enphase">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/unirac.png" alt="Unirac">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/jasolar.png" alt="JA Solar">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/sungrow.png" alt="Sungrow">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/canadiansolar.png" alt="Canadian Solar">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/tesla.png" alt="Tesla">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/risen.png" alt="Risen">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/jinko.png" alt="Jinko Solar">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/firstsolar.png" alt="First Solar">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/sma.png" alt="SMA">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/yingli.png" alt="Yingli Solar">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/hanwha.png" alt="Hanwha">
+                    </div>
 
                 </div>
 
@@ -1624,8 +2346,12 @@
             <div class="alliance-category">
 
                 <div class="alliance-category-heading">
-                    <span>COLABORACIÓN</span>
-                    <h3>Asociaciones</h3>
+                    <span data-i18n="alliances.collaboration">
+                        COLABORACIÓN
+                    </span>
+                    <h3 data-i18n="alliances.associations">
+                        Asociaciones
+                    </h3>
                 </div>
 
                 <div class="logos-grid associations-grid">
@@ -1649,8 +2375,12 @@
             <div class="alliance-category">
 
                 <div class="alliance-category-heading">
-                    <span>ESTÁNDARES</span>
-                    <h3>Certificaciones</h3>
+                    <span data-i18n="alliances.standards">
+                        ESTÁNDARES
+                    </span>
+                    <h3 data-i18n="alliances.certifications">
+                        Certificaciones
+                    </h3>
                 </div>
 
                 <div class="logos-grid certifications-grid">
@@ -1679,13 +2409,15 @@
 
                 <div class="connect-content">
 
-                    <span class="connect-eyebrow">
+                    <span class="connect-eyebrow" data-i18n="connect.eyebrow">
                         TU ENERGÍA EN TUS MANOS
                     </span>
 
-                    <h2>Solaris <span>Connect</span></h2>
+                    <h2>
+                        Solaris <span>Connect</span>
+                    </h2>
 
-                    <p class="connect-intro">
+                    <p class="connect-intro" data-i18n="connect.description">
                         Monitorea la generación de tu sistema solar y
                         conoce tu consumo energético desde una experiencia
                         diseñada para dispositivos móviles.
@@ -1696,32 +2428,48 @@
                         <div class="connect-feature">
                             <div class="connect-feature-icon">☀</div>
                             <div>
-                                <strong>Generación en tiempo real</strong>
-                                <span>Visualiza el desempeño de tu sistema solar.</span>
+                                <strong data-i18n="connect.generation">
+                                    Generación en tiempo real
+                                </strong>
+                                <span data-i18n="connect.generation.description">
+                                    Visualiza el desempeño de tu sistema solar.
+                                </span>
                             </div>
                         </div>
 
                         <div class="connect-feature">
                             <div class="connect-feature-icon">⚡</div>
                             <div>
-                                <strong>Monitoreo de consumo</strong>
-                                <span>Comprende cómo utilizas la energía.</span>
+                                <strong data-i18n="connect.consumption">
+                                    Monitoreo de consumo
+                                </strong>
+                                <span data-i18n="connect.consumption.description">
+                                    Comprende cómo utilizas la energía.
+                                </span>
                             </div>
                         </div>
 
                         <div class="connect-feature">
                             <div class="connect-feature-icon">↗</div>
                             <div>
-                                <strong>Rendimiento</strong>
-                                <span>Consulta indicadores del sistema.</span>
+                                <strong data-i18n="connect.performance">
+                                    Rendimiento
+                                </strong>
+                                <span data-i18n="connect.performance.description">
+                                    Consulta indicadores del sistema.
+                                </span>
                             </div>
                         </div>
 
                         <div class="connect-feature">
                             <div class="connect-feature-icon">🔔</div>
                             <div>
-                                <strong>Alertas</strong>
-                                <span>Mantente informado sobre tu instalación.</span>
+                                <strong data-i18n="connect.alerts">
+                                    Alertas
+                                </strong>
+                                <span data-i18n="connect.alerts.description">
+                                    Mantente informado sobre tu instalación.
+                                </span>
                             </div>
                         </div>
 
@@ -1733,7 +2481,9 @@
 
                     <div class="connect-app-top">
 
-                        <span class="connect-app-label">SOLARIS ENERGY</span>
+                        <span class="connect-app-label">
+                            SOLARIS ENERGY
+                        </span>
 
                         <div class="connect-app-logo">☀</div>
 
@@ -1747,12 +2497,16 @@
 
                         <div class="dashboard-status">
                             <span class="status-dot"></span>
-                            <span class="status-text">Sistema conectado</span>
+                            <span class="status-text" data-i18n="connect.status">
+                                Sistema conectado
+                            </span>
                         </div>
 
                         <div class="dashboard-generation">
 
-                            <small>GENERACIÓN ACTUAL</small>
+                            <small data-i18n="connect.currentGeneration">
+                                GENERACIÓN ACTUAL
+                            </small>
 
                             <div class="generation-value">
                                 <strong>4.82</strong>
@@ -1768,8 +2522,12 @@
                                 <span class="dashboard-stat-icon">☀</span>
 
                                 <div class="dashboard-stat-text">
-                                    <small>Generación hoy</small>
-                                    <strong>24.6 <span>kWh</span></strong>
+                                    <small data-i18n="connect.todayGeneration">
+                                        Generación hoy
+                                    </small>
+                                    <strong>
+                                        24.6 <span>kWh</span>
+                                    </strong>
                                 </div>
 
                             </div>
@@ -1779,8 +2537,12 @@
                                 <span class="dashboard-stat-icon energy">⚡</span>
 
                                 <div class="dashboard-stat-text">
-                                    <small>Consumo hoy</small>
-                                    <strong>18.2 <span>kWh</span></strong>
+                                    <small data-i18n="connect.todayConsumption">
+                                        Consumo hoy
+                                    </small>
+                                    <strong>
+                                        18.2 <span>kWh</span>
+                                    </strong>
                                 </div>
 
                             </div>
@@ -1790,7 +2552,9 @@
                         <div class="dashboard-performance">
 
                             <div class="performance-heading">
-                                <span>Rendimiento del sistema</span>
+                                <span data-i18n="connect.systemPerformance">
+                                    Rendimiento del sistema
+                                </span>
                                 <strong>91%</strong>
                             </div>
 
@@ -1804,7 +2568,7 @@
 
                     <div class="connect-platforms">
 
-                        <span class="platforms-label">
+                        <span class="platforms-label" data-i18n="connect.available">
                             DISPONIBLE PARA
                         </span>
 
@@ -1822,17 +2586,23 @@
 
                 <div>
                     <strong>24/7</strong>
-                    <span>Monitoreo de tu sistema</span>
+                    <span data-i18n="connect.monitoring">
+                        Monitoreo de tu sistema
+                    </span>
                 </div>
 
                 <div>
                     <strong>Android + iOS + Huawei</strong>
-                    <span>Acceso desde dispositivos móviles</span>
+                    <span data-i18n="connect.mobileAccess">
+                        Acceso desde dispositivos móviles
+                    </span>
                 </div>
 
                 <div>
                     <strong>Smart Energy</strong>
-                    <span>Información para mejores decisiones</span>
+                    <span data-i18n="connect.decisions">
+                        Información para mejores decisiones
+                    </span>
                 </div>
 
             </div>
@@ -1848,12 +2618,14 @@
     <section class="academic-collaboration">
 
         <div class="academic-project-title">
-            <span>PROYECTO ACADÉMICO</span>
+            <span data-i18n="academic.title">
+                PROYECTO ACADÉMICO
+            </span>
         </div>
 
         <div class="students-block">
 
-            <span class="students-block-title">
+            <span class="students-block-title" data-i18n="academic.students">
                 ALUMNOS PARTICIPANTES
             </span>
 
@@ -1868,7 +2640,7 @@
 
             <div class="academic-detail-item">
 
-                <span class="academic-detail-label">
+                <span class="academic-detail-label" data-i18n="academic.professor">
                     PROFESORA
                 </span>
 
@@ -1882,7 +2654,7 @@
 
             <div class="academic-detail-item">
 
-                <span class="academic-detail-label">
+                <span class="academic-detail-label" data-i18n="academic.course">
                     MATERIA
                 </span>
 
@@ -1897,7 +2669,9 @@
         <div class="academic-row institutions-title-row">
 
             <div class="academic-row-title">
-                <span>INSTITUCIONES PARTICIPANTES</span>
+                <span data-i18n="academic.institutions">
+                    INSTITUCIONES PARTICIPANTES
+                </span>
             </div>
 
         </div>
@@ -1931,9 +2705,7 @@
             <div class="footer-brand">
 
                 <a href="#inicio" class="footer-logo">
-
                     <img src="images/solarenergylogo.png" alt="Solaris Energy">
-
                 </a>
 
                 <div class="footer-brand-text">
@@ -1942,7 +2714,7 @@
 
                     <span>Solar Solutions</span>
 
-                    <small>
+                    <small data-i18n="footer.slogan">
                         Energía hoy. Un mejor mañana.
                     </small>
 
@@ -1956,7 +2728,7 @@
                     Monterrey, Nuevo León, México
                 </span>
 
-                <span>
+                <span data-i18n="footer.academic">
                     Proyecto académico 2026
                 </span>
 
@@ -1972,13 +2744,13 @@
 
     <div class="floating-actions">
 
-        <!-- NUEVO BOTÓN FLOTANTE DE COTIZACIÓN -->
-
         <a href="#cotizar" class="floating-quote" aria-label="Cotizar paneles">
 
             <span class="floating-quote-icon">☀</span>
 
-            <b>Cotizar</b>
+            <b data-i18n="floating.quote">
+                Cotizar
+            </b>
 
         </a>
 
@@ -1997,7 +2769,9 @@
 
             <span>↑</span>
 
-            <b>Inicio</b>
+            <b data-i18n="floating.home">
+                Inicio
+            </b>
 
         </button>
 
@@ -2021,7 +2795,9 @@
 
                     <span>
                         <i></i>
-                        En línea
+                        <span data-i18n="chat.online">
+                            En línea
+                        </span>
                     </span>
 
                 </div>
@@ -2042,15 +2818,17 @@
 
                 <div class="message-bubble">
 
-                    <strong>¡Hola!</strong>
+                    <strong data-i18n="chat.hello">
+                        ¡Hola!
+                    </strong>
 
-                    <p>
+                    <p data-i18n="chat.intro">
                         Soy el asistente virtual de Solaris Energy.
                         Puedo ayudarte con información sobre nuestros
                         sistemas solares.
                     </p>
 
-                    <p>
+                    <p data-i18n="chat.select">
                         Selecciona una de las preguntas disponibles.
                     </p>
 
@@ -2062,21 +2840,22 @@
 
         <div class="chatbot-question-area">
 
-            <span class="chatbot-question-title">
+            <span class="chatbot-question-title" data-i18n="chat.questionTitle">
                 ¿QUÉ TE GUSTARÍA SABER?
             </span>
 
-            <div id="chatbotQuestions" class="chatbot-questions"></div>
+            <div id="chatbotQuestions" class="chatbot-questions">
+            </div>
 
         </div>
 
         <div class="chatbot-footer">
 
-            <button id="chatbotReset" type="button">
+            <button id="chatbotReset" type="button" data-i18n="chat.reset">
                 ↻ Reiniciar conversación
             </button>
 
-            <small>
+            <small data-i18n="chat.disclaimer">
                 Solaris Assistant · Simulación informativa
             </small>
 
