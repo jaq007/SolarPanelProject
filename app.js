@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const floatingQuote =
         document.querySelector(".floating-quote");
 
-
     /* =====================================================
        FLOATING QUOTE BUTTON
     ====================================================== */
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     /* =====================================================
        BACK TO HOME
     ====================================================== */
@@ -66,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         };
 
-
         window.addEventListener(
             "scroll",
             updateBackToHomeButton,
@@ -75,9 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );
 
-
         updateBackToHomeButton();
-
 
         backToHome.addEventListener(
             "click",
@@ -92,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /* =====================================================
        CFE RATES
@@ -117,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         ],
-
 
         pyme: [
 
@@ -167,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
-
     const cfeRateSelect =
         document.getElementById("cfeRate");
 
@@ -176,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const rateDescription =
         document.getElementById("rateDescription");
-
 
     function getSelectedProjectType() {
 
@@ -190,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
             : "residencial";
 
     }
-
 
     function updateRateDescription() {
 
@@ -211,14 +201,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     cfeRateSelect.value
             ) || rates[0];
 
-
         if (rateName) {
 
             rateName.textContent =
                 selectedRate.name;
 
         }
-
 
         if (rateDescription) {
 
@@ -228,7 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
-
 
     function rebuildRateOptions() {
 
@@ -242,9 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const rates =
             cfeRates[projectType];
 
-
         cfeRateSelect.innerHTML = "";
-
 
         rates.forEach(rate => {
 
@@ -265,11 +250,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-
         updateRateDescription();
 
     }
-
 
     document
         .querySelectorAll(
@@ -284,7 +267,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-
     if (cfeRateSelect) {
 
         cfeRateSelect.addEventListener(
@@ -294,9 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     rebuildRateOptions();
-
 
     /* =====================================================
        PROJECT PRESELECTION
@@ -318,7 +298,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             `input[name="projectType"][value="${project}"]`
                         );
 
-
                     if (radio) {
 
                         radio.checked = true;
@@ -331,7 +310,6 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
         });
-
 
     /* =====================================================
        SOLAR CALCULATOR
@@ -362,7 +340,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "recalculateButton"
         );
 
-
     const solarAssumptions = {
 
         panelPowerKw: 0.585,
@@ -377,7 +354,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
-
     const currencyFormatter =
         new Intl.NumberFormat(
             "es-MX",
@@ -388,7 +364,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );
 
-
     const numberFormatter =
         new Intl.NumberFormat(
             "es-MX",
@@ -396,7 +371,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 maximumFractionDigits: 0
             }
         );
-
 
     function calculateSolarProject(
         bimonthlyConsumption,
@@ -406,7 +380,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const annualConsumption =
             bimonthlyConsumption * 6;
 
-
         const requiredCapacity =
             (
                 annualConsumption *
@@ -415,24 +388,20 @@ document.addEventListener("DOMContentLoaded", () => {
             solarAssumptions
                 .annualGenerationPerKwp;
 
-
         const panels =
             Math.ceil(
                 requiredCapacity /
                 solarAssumptions.panelPowerKw
             );
 
-
         const installedCapacity =
             panels *
             solarAssumptions.panelPowerKw;
-
 
         const annualGeneration =
             installedCapacity *
             solarAssumptions
                 .annualGenerationPerKwp;
-
 
         const coverage =
             Math.min(
@@ -443,7 +412,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 ) * 100
             );
 
-
         const costPerKwp =
             projectType === "pyme"
                 ? solarAssumptions
@@ -451,11 +419,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 : solarAssumptions
                     .residentialCostPerKwp;
 
-
         const investment =
             installedCapacity *
             costPerKwp;
-
 
         return {
 
@@ -474,7 +440,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
     }
-
 
     function displaySolarResults(
         result,
@@ -516,7 +481,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 "resultDescription"
             );
 
-
         if (resultPanels) {
 
             resultPanels.textContent =
@@ -524,14 +488,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         if (resultCapacity) {
 
             resultCapacity.textContent =
                 `${result.installedCapacity.toFixed(2)} kWp`;
 
         }
-
 
         if (resultInvestment) {
 
@@ -542,7 +504,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         if (resultAnnualConsumption) {
 
             resultAnnualConsumption.textContent =
@@ -551,7 +512,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
         }
-
 
         if (resultAnnualGeneration) {
 
@@ -562,14 +522,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         if (resultCoverage) {
 
             resultCoverage.textContent =
                 `${result.coverage.toFixed(0)}%`;
 
         }
-
 
         if (resultDescription) {
 
@@ -579,7 +537,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     : "Estimación preliminar para tu proyecto residencial.";
 
         }
-
 
         /* =================================================
            FINANCING
@@ -593,7 +550,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const payment36 =
             result.investment / 36;
-
 
         const payment12Element =
             document.getElementById(
@@ -610,7 +566,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 "payment36"
             );
 
-
         if (payment12Element) {
 
             payment12Element.textContent =
@@ -620,7 +575,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         if (payment24Element) {
 
             payment24Element.textContent =
@@ -629,7 +583,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
         }
-
 
         if (payment36Element) {
 
@@ -641,7 +594,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
-
 
     if (
         solarQuoteForm &&
@@ -656,12 +608,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 event.preventDefault();
 
-
                 const consumption =
                     Number(
                         energyConsumption.value
                     );
-
 
                 if (
                     !Number.isFinite(consumption) ||
@@ -674,24 +624,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
 
-
                 const projectType =
                     getSelectedProjectType();
-
 
                 quoteResults.hidden =
                     true;
 
-
                 quoteProcessing.hidden =
                     false;
-
 
                 quoteProcessing.scrollIntoView({
                     behavior: "smooth",
                     block: "center"
                 });
-
 
                 const result =
                     calculateSolarProject(
@@ -699,23 +644,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         projectType
                     );
 
-
                 setTimeout(
                     () => {
 
                         quoteProcessing.hidden =
                             true;
 
-
                         displaySolarResults(
                             result,
                             projectType
                         );
 
-
                         quoteResults.hidden =
                             false;
-
 
                         quoteResults.scrollIntoView({
                             behavior: "smooth",
@@ -730,7 +671,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /* =====================================================
        RESET CALCULATOR
@@ -754,15 +694,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 quoteResults.hidden =
                     true;
 
-
                 solarQuoteForm.reset();
-
 
                 const residentialRadio =
                     document.querySelector(
                         'input[name="projectType"][value="residencial"]'
                     );
-
 
                 if (residentialRadio) {
 
@@ -771,19 +708,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
 
-
                 rebuildRateOptions();
-
 
                 energyConsumption.value =
                     "";
-
 
                 solarQuoteForm.scrollIntoView({
                     behavior: "smooth",
                     block: "center"
                 });
-
 
                 setTimeout(
                     () => {
@@ -798,7 +731,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /* =====================================================
        SOLARIS ASSISTANT
@@ -839,7 +771,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(
             ".chatbot-notification"
         );
-
 
     const chatbotData = [
 
@@ -925,7 +856,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ];
 
-
     /* =====================================================
        RENDER QUESTIONS
     ====================================================== */
@@ -936,9 +866,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         chatbotQuestions.innerHTML = "";
-
 
         chatbotData.forEach(
             (item, index) => {
@@ -948,18 +876,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         "button"
                     );
 
-
                 button.type =
                     "button";
-
 
                 button.className =
                     "chat-question-button";
 
-
                 button.textContent =
                     `${index + 1}. ${item.question}`;
-
 
                 button.addEventListener(
                     "click",
@@ -972,7 +896,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 );
 
-
                 chatbotQuestions.appendChild(
                     button
                 );
@@ -981,7 +904,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /* =====================================================
        ADD USER MESSAGE
@@ -993,41 +915,32 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         const message =
             document.createElement("div");
-
 
         message.className =
             "chat-message user-message";
 
-
         const bubble =
             document.createElement("div");
-
 
         bubble.className =
             "message-bubble";
 
-
         bubble.textContent =
             text;
-
 
         message.appendChild(
             bubble
         );
 
-
         chatbotMessages.appendChild(
             message
         );
 
-
         scrollChatToBottom();
 
     }
-
 
     /* =====================================================
        ADD ASSISTANT MESSAGE
@@ -1039,67 +952,52 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         const message =
             document.createElement("div");
-
 
         message.className =
             "chat-message assistant-message";
 
-
         const avatar =
             document.createElement("div");
-
 
         avatar.className =
             "message-avatar";
 
-
         avatar.textContent =
             "☀";
-
 
         const bubble =
             document.createElement("div");
 
-
         bubble.className =
             "message-bubble";
-
 
         const paragraph =
             document.createElement("p");
 
-
         paragraph.textContent =
             text;
-
 
         bubble.appendChild(
             paragraph
         );
 
-
         message.appendChild(
             avatar
         );
-
 
         message.appendChild(
             bubble
         );
 
-
         chatbotMessages.appendChild(
             message
         );
 
-
         scrollChatToBottom();
 
     }
-
 
     /* =====================================================
        TYPING INDICATOR
@@ -1111,38 +1009,29 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         const message =
             document.createElement("div");
-
 
         message.className =
             "chat-message assistant-message";
 
-
         message.id =
             "chatbotTypingMessage";
-
 
         const avatar =
             document.createElement("div");
 
-
         avatar.className =
             "message-avatar";
-
 
         avatar.textContent =
             "☀";
 
-
         const typing =
             document.createElement("div");
 
-
         typing.className =
             "message-bubble chatbot-typing";
-
 
         typing.innerHTML =
             `
@@ -1151,26 +1040,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span></span>
             `;
 
-
         message.appendChild(
             avatar
         );
-
 
         message.appendChild(
             typing
         );
 
-
         chatbotMessages.appendChild(
             message
         );
 
-
         scrollChatToBottom();
 
     }
-
 
     function removeTypingIndicator() {
 
@@ -1179,7 +1063,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 "chatbotTypingMessage"
             );
 
-
         if (typingMessage) {
 
             typingMessage.remove();
@@ -1187,7 +1070,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
-
 
     /* =====================================================
        PROCESS QUESTION
@@ -1199,9 +1081,7 @@ document.addEventListener("DOMContentLoaded", () => {
             item.question
         );
 
-
         showTypingIndicator();
-
 
         /*
             Short delay makes the simulated
@@ -1213,7 +1093,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 removeTypingIndicator();
 
-
                 addAssistantMessage(
                     item.answer
                 );
@@ -1223,7 +1102,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /* =====================================================
        SCROLL CHAT
@@ -1235,7 +1113,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         requestAnimationFrame(
             () => {
 
@@ -1246,7 +1123,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /* =====================================================
        OPEN CHAT
@@ -1261,23 +1137,19 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         chatbotPanel.classList.add(
             "open"
         );
-
 
         chatbotPanel.setAttribute(
             "aria-hidden",
             "false"
         );
 
-
         chatbotToggle.setAttribute(
             "aria-expanded",
             "true"
         );
-
 
         if (chatbotNotification) {
 
@@ -1286,11 +1158,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         scrollChatToBottom();
 
     }
-
 
     /* =====================================================
        CLOSE CHAT
@@ -1305,17 +1175,14 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         chatbotPanel.classList.remove(
             "open"
         );
-
 
         chatbotPanel.setAttribute(
             "aria-hidden",
             "true"
         );
-
 
         chatbotToggle.setAttribute(
             "aria-expanded",
@@ -1323,7 +1190,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /* =====================================================
        RESET CHAT
@@ -1334,7 +1200,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!chatbotMessages) {
             return;
         }
-
 
         chatbotMessages.innerHTML =
             `
@@ -1365,11 +1230,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-
         scrollChatToBottom();
 
     }
-
 
     /* =====================================================
        CHAT EVENTS
@@ -1402,7 +1265,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     if (chatbotClose) {
 
         chatbotClose.addEventListener(
@@ -1412,7 +1274,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     if (chatbotReset) {
 
         chatbotReset.addEventListener(
@@ -1421,7 +1282,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     /*
         Close with ESC key.
@@ -1444,7 +1304,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     );
-
 
     renderChatbotQuestions();
 
