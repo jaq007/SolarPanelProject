@@ -249,9 +249,7 @@
 
             <div class="hero-visual">
 
-                <div class="hero-image-card">
-                    <img src="images/slogan.png" alt="Energía hoy. Un mejor mañana.">
-                </div>
+                <img id="heroSloganImage" src="images/slogan.png" alt="Energía hoy. Un mejor mañana.">
 
             </div>
 
@@ -1270,7 +1268,202 @@
                 </div>
 
             </div>
+            <!-- =====================================================
+             LOGÍSTICA INTEGRADA 4PL
+        ====================================================== -->
 
+            <div class="logistics-section">
+
+                <div class="logistics-heading">
+
+                    <span data-i18n="logistics.eyebrow">
+                        LOGÍSTICA INTEGRADA
+                    </span>
+
+                    <h3 data-i18n="logistics.title">
+                        Una cadena de suministro conectada de principio a fin.
+                    </h3>
+
+                    <p data-i18n="logistics.description">
+                        Nuestro modelo integra a Redwood Logistics como proveedor 4PL
+                        para coordinar proveedores, fabricación, transporte,
+                        almacenamiento y distribución dentro de una misma operación.
+                    </p>
+
+                </div>
+                <!-- FLUJO LOGÍSTICO 4PL -->
+                <div class="logistics-workflow">
+
+                    <div class="logistics-steps">
+
+                        <button class="logistics-step active" type="button" data-logistics-step="1" aria-pressed="true">
+                            <span class="logistics-step-icon">📦</span>
+                            <span class="logistics-step-number">01</span>
+                            <span class="logistics-step-title" data-i18n="logistics.step1.title">
+                                Proveedores
+                            </span>
+                        </button>
+
+                        <button class="logistics-step" type="button" data-logistics-step="2" aria-pressed="false">
+                            <span class="logistics-step-icon">🏭</span>
+                            <span class="logistics-step-number">02</span>
+                            <span class="logistics-step-title" data-i18n="logistics.step2.title">
+                                Fabricación
+                            </span>
+                        </button>
+
+                        <button class="logistics-step" type="button" data-logistics-step="3" aria-pressed="false">
+                            <span class="logistics-step-icon">🚛</span>
+                            <span class="logistics-step-number">03</span>
+                            <span class="logistics-step-title" data-i18n="logistics.step3.title">
+                                Transporte
+                            </span>
+                        </button>
+
+                        <button class="logistics-step" type="button" data-logistics-step="4" aria-pressed="false">
+                            <span class="logistics-step-icon">🏢</span>
+                            <span class="logistics-step-number">04</span>
+                            <span class="logistics-step-title" data-i18n="logistics.step4.title">
+                                Almacenamiento
+                            </span>
+                        </button>
+
+                        <button class="logistics-step" type="button" data-logistics-step="5" aria-pressed="false">
+                            <span class="logistics-step-icon">📍</span>
+                            <span class="logistics-step-number">05</span>
+                            <span class="logistics-step-title" data-i18n="logistics.step5.title">
+                                Distribución en Monterrey
+                            </span>
+                        </button>
+
+                    </div>
+                    <!-- DETALLE DE LA ETAPA -->
+                    <div class="logistics-detail">
+
+                        <div class="logistics-detail-top">
+                            <span id="logisticsDetailNumber" class="logistics-detail-number">
+                                01
+                            </span>
+
+                            <span id="logisticsDetailIcon" class="logistics-detail-icon">
+                                📦
+                            </span>
+                        </div>
+
+                        <span class="logistics-detail-label" data-i18n="logistics.detail.label">
+                            ETAPA DE LA CADENA
+                        </span>
+
+                        <h4 id="logisticsDetailTitle" data-i18n="logistics.step1.title">
+                            Proveedores
+                        </h4>
+
+                        <p id="logisticsDetailDescription" data-i18n="logistics.step1.description">
+                            Los proveedores proporcionan los materiales y componentes
+                            necesarios. Redwood coordina su movimiento y conecta la
+                            información de los proveedores con las necesidades de
+                            transporte y producción.
+                        </p>
+
+                        <div class="logistics-importance">
+
+                            <span class="logistics-importance-icon">↗</span>
+
+                            <div>
+                                <strong data-i18n="logistics.importance">
+                                    ¿Por qué es importante?
+                                </strong>
+
+                                <p id="logisticsDetailImportance" data-i18n="logistics.step1.importance">
+                                    Ayuda a que los materiales lleguen cuando se
+                                    necesitan, evitando retrasos y permitiendo que la
+                                    producción avance.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- VALOR DEL MODELO 4PL -->
+                <div class="logistics-value">
+
+                    <div class="logistics-value-heading">
+
+                        <span data-i18n="logistics.value.eyebrow">
+                            EL VALOR DEL MODELO 4PL
+                        </span>
+
+                        <h3 data-i18n="logistics.value.title">
+                            Una operación conectada, no procesos aislados.
+                        </h3>
+
+                        <p data-i18n="logistics.value.description">
+                            Redwood conecta proveedores, fabricación, transporte,
+                            almacenamiento y distribución dentro de un mismo sistema,
+                            administrando la cadena de suministro como una operación
+                            conectada.
+                        </p>
+
+                    </div>
+
+                    <div class="logistics-benefits">
+
+                        <div class="logistics-benefit">
+                            <span class="logistics-benefit-icon">◉</span>
+
+                            <strong data-i18n="logistics.value.visibility">
+                                Mayor visibilidad
+                            </strong>
+
+                            <p data-i18n="logistics.value.visibility.description">
+                                Información de toda la cadena de suministro.
+                            </p>
+                        </div>
+
+                        <div class="logistics-benefit">
+                            <span class="logistics-benefit-icon">↔</span>
+
+                            <strong data-i18n="logistics.value.coordination">
+                                Mejor coordinación
+                            </strong>
+
+                            <p data-i18n="logistics.value.coordination.description">
+                                Los participantes y procesos trabajan de forma conectada.
+                            </p>
+                        </div>
+
+                        <div class="logistics-benefit">
+                            <span class="logistics-benefit-icon">↓</span>
+
+                            <strong data-i18n="logistics.value.costs">
+                                Menores costos innecesarios
+                            </strong>
+
+                            <p data-i18n="logistics.value.costs.description">
+                                Mejores decisiones ayudan a evitar costos logísticos
+                                innecesarios.
+                            </p>
+                        </div>
+
+                        <div class="logistics-benefit">
+                            <span class="logistics-benefit-icon">✓</span>
+
+                            <strong data-i18n="logistics.value.delivery">
+                                Entregas más confiables
+                            </strong>
+
+                            <p data-i18n="logistics.value.delivery.description">
+                                La coordinación permite identificar problemas antes de
+                                que afecten la entrega.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </section>
 
         <!-- =================================================
@@ -1507,8 +1700,7 @@
                                         ↓
                                     </span>
 
-                                    <img src="images/cfe.png" alt="Ejemplo de recibo CFE"
-                                        class="cfe-receipt-image">
+                                    <img src="images/cfe.png" alt="Ejemplo de recibo CFE" class="cfe-receipt-image">
 
                                 </div>
 

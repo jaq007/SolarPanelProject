@@ -364,7 +364,69 @@ document.addEventListener("DOMContentLoaded", () => {
             "operations.mexico.description":
                 "Integración e instalación",
 
-            /* MAINTENANCE */
+                    /* INTEGRATED 4PL LOGISTICS */
+
+        "logistics.eyebrow": "LOGÍSTICA INTEGRADA",
+        "logistics.title":
+            "Una cadena de suministro conectada de principio a fin.",
+        "logistics.description":
+            "Nuestro modelo integra a Redwood Logistics como proveedor 4PL para coordinar proveedores, fabricación, transporte, almacenamiento y distribución dentro de una misma operación.",
+
+        "logistics.detail.label": "ETAPA DE LA CADENA",
+        "logistics.importance": "¿Por qué es importante?",
+
+        "logistics.step1.title": "Proveedores",
+        "logistics.step1.description":
+            "Los proveedores proporcionan los materiales y componentes necesarios. Redwood coordina su movimiento y conecta la información de los proveedores con las necesidades de transporte y producción.",
+        "logistics.step1.importance":
+            "Ayuda a que los materiales lleguen cuando se necesitan, evitando retrasos y permitiendo que la producción avance.",
+
+        "logistics.step2.title": "Fabricación",
+        "logistics.step2.description":
+            "Los paneles solares se fabrican y preparan para su distribución. Redwood conecta el estado de producción con las necesidades de transporte de la siguiente etapa.",
+        "logistics.step2.importance":
+            "Permite planificar el transporte estratégicamente con base en la producción real, en lugar de administrar fabricación y logística como procesos separados.",
+
+        "logistics.step3.title": "Transporte",
+        "logistics.step3.description":
+            "La operación puede requerir diferentes transportistas, rutas y opciones de transporte. Redwood coordina estas alternativas dentro de un mismo sistema.",
+        "logistics.step3.importance":
+            "Permite tomar decisiones considerando costo, tiempo y confiabilidad, en lugar de depender de un solo transportista para toda la operación.",
+
+        "logistics.step4.title": "Almacenamiento",
+        "logistics.step4.description":
+            "Redwood conecta el almacenamiento con el transporte y la demanda. El inventario puede mantenerse cerca de Monterrey hasta que sea necesario.",
+        "logistics.step4.importance":
+            "Ayuda a tener paneles disponibles cuando se necesitan sin mover o almacenar inventario en exceso.",
+
+        "logistics.step5.title": "Distribución en Monterrey",
+        "logistics.step5.description":
+            "Redwood coordina el movimiento del inventario hacia el mercado de Monterrey y hasta el punto final de instalación.",
+        "logistics.step5.importance":
+            "Una mejor coordinación permite entregas más confiables y contribuye a una mejor experiencia para el cliente.",
+
+        "logistics.value.eyebrow": "EL VALOR DEL MODELO 4PL",
+        "logistics.value.title":
+            "Una operación conectada, no procesos aislados.",
+        "logistics.value.description":
+            "Redwood conecta proveedores, fabricación, transporte, almacenamiento y distribución dentro de un mismo sistema, administrando la cadena de suministro como una operación conectada.",
+
+        "logistics.value.visibility": "Mayor visibilidad",
+        "logistics.value.visibility.description":
+            "Información de toda la cadena de suministro.",
+
+        "logistics.value.coordination": "Mejor coordinación",
+        "logistics.value.coordination.description":
+            "Los participantes y procesos trabajan de forma conectada.",
+
+        "logistics.value.costs": "Menores costos innecesarios",
+        "logistics.value.costs.description":
+            "Mejores decisiones ayudan a evitar costos logísticos innecesarios.",
+
+        "logistics.value.delivery": "Entregas más confiables",
+        "logistics.value.delivery.description":
+            "La coordinación permite identificar problemas antes de que afecten la entrega.",
+                /* MAINTENANCE */
 
             "maintenance.eyebrow": "PROTEGE TU INVERSIÓN",
             "maintenance.title": "Pólizas de mantenimiento",
@@ -1015,7 +1077,69 @@ document.addEventListener("DOMContentLoaded", () => {
             "operations.mexico.description":
                 "Integration and installation",
 
-            /* MAINTENANCE */
+                    /* INTEGRATED 4PL LOGISTICS */
+
+        "logistics.eyebrow": "INTEGRATED LOGISTICS",
+        "logistics.title":
+            "A connected supply chain from end to end.",
+        "logistics.description":
+            "Our model integrates Redwood Logistics as a 4PL provider to coordinate suppliers, manufacturing, transportation, warehousing, and distribution within a single operation.",
+
+        "logistics.detail.label": "SUPPLY CHAIN STAGE",
+        "logistics.importance": "Why is it important?",
+
+        "logistics.step1.title": "Suppliers",
+        "logistics.step1.description":
+            "Suppliers provide the materials and components required for the operation. Redwood coordinates their movement and connects supplier information with transportation and production needs.",
+        "logistics.step1.importance":
+            "It helps ensure materials arrive when needed, preventing delays and allowing production to continue.",
+
+        "logistics.step2.title": "Manufacturing",
+        "logistics.step2.description":
+            "Solar panels are manufactured and prepared for distribution. Redwood connects production status with the transportation requirements of the next stage.",
+        "logistics.step2.importance":
+            "It allows transportation to be planned strategically based on actual production instead of managing manufacturing and logistics as separate processes.",
+
+        "logistics.step3.title": "Transportation",
+        "logistics.step3.description":
+            "The operation may require different carriers, routes, and transportation options. Redwood coordinates these alternatives within a single system.",
+        "logistics.step3.importance":
+            "It enables decisions based on cost, time, and reliability instead of relying on a single carrier for the entire operation.",
+
+        "logistics.step4.title": "Warehousing",
+        "logistics.step4.description":
+            "Redwood connects warehousing with transportation and demand. Inventory can be stored near Monterrey until it is needed.",
+        "logistics.step4.importance":
+            "It helps keep panels available when needed without moving or storing excess inventory.",
+
+        "logistics.step5.title": "Distribution in Monterrey",
+        "logistics.step5.description":
+            "Redwood coordinates the movement of inventory to the Monterrey market and ultimately to the final installation point.",
+        "logistics.step5.importance":
+            "Better coordination enables more reliable deliveries and contributes to a better customer experience.",
+
+        "logistics.value.eyebrow": "THE VALUE OF THE 4PL MODEL",
+        "logistics.value.title":
+            "One connected operation, not isolated processes.",
+        "logistics.value.description":
+            "Redwood connects suppliers, manufacturing, transportation, warehousing, and distribution within a single system, managing the supply chain as one connected operation.",
+
+        "logistics.value.visibility": "Greater visibility",
+        "logistics.value.visibility.description":
+            "Information across the entire supply chain.",
+
+        "logistics.value.coordination": "Better coordination",
+        "logistics.value.coordination.description":
+            "Participants and processes work together as a connected operation.",
+
+        "logistics.value.costs": "Lower unnecessary costs",
+        "logistics.value.costs.description":
+            "Better decisions help avoid unnecessary logistics costs.",
+
+        "logistics.value.delivery": "More reliable deliveries",
+        "logistics.value.delivery.description":
+            "Coordination helps identify problems before they affect delivery.",
+                /* MAINTENANCE */
 
             "maintenance.eyebrow": "PROTECT YOUR INVESTMENT",
             "maintenance.title": "Maintenance plans",
@@ -1392,46 +1516,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    function setLanguage(language) {
+   function setLanguage(language) {
 
-        if (!translations[language]) {
-            return;
+    if (!translations[language]) {
+        return;
+    }
+
+    currentLanguage = language;
+
+    document.documentElement.lang = language;
+
+    languageButtons.forEach(button => {
+
+        const buttonLanguage =
+            button.dataset.language;
+
+        const isActive =
+            buttonLanguage === language;
+
+        button.classList.toggle(
+            "active",
+            isActive
+        );
+
+        button.setAttribute(
+            "aria-pressed",
+            isActive ? "true" : "false"
+        );
+
+    });
+
+    translateStaticContent(language);
+
+    rebuildRateOptions();
+
+    renderChatbotQuestions();
+
+    refreshChatbotLanguage();
+
+    refreshCurrentResultsLanguage();
+
+    const heroSloganImage =
+        document.getElementById("heroSloganImage");
+
+    if (heroSloganImage) {
+
+        if (language === "en") {
+            heroSloganImage.src = "images/sloganen.png";
+            heroSloganImage.alt =
+                "Energy today. A better tomorrow.";
+        } else {
+            heroSloganImage.src = "images/slogan.png";
+            heroSloganImage.alt =
+                "Energía hoy. Un mejor mañana.";
         }
 
-        currentLanguage = language;
-
-        document.documentElement.lang = language;
-
-        languageButtons.forEach(button => {
-
-            const buttonLanguage =
-                button.dataset.language;
-
-            const isActive =
-                buttonLanguage === language;
-
-            button.classList.toggle(
-                "active",
-                isActive
-            );
-
-            button.setAttribute(
-                "aria-pressed",
-                isActive ? "true" : "false"
-            );
-
-        });
-
-        translateStaticContent(language);
-
-        rebuildRateOptions();
-
-        renderChatbotQuestions();
-
-        refreshChatbotLanguage();
-
-        refreshCurrentResultsLanguage();
     }
+}
 
 
     languageButtons.forEach(button => {
@@ -2833,7 +2974,195 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     );
+/* =====================================================
+   LOGÍSTICA INTEGRADA 4PL - INTERACTION
+===================================================== */
 
+const logisticsSteps = document.querySelectorAll(".logistics-step");
+
+const logisticsDetailNumber =
+    document.getElementById("logisticsDetailNumber");
+
+const logisticsDetailIcon =
+    document.getElementById("logisticsDetailIcon");
+
+const logisticsDetailTitle =
+    document.getElementById("logisticsDetailTitle");
+
+const logisticsDetailDescription =
+    document.getElementById("logisticsDetailDescription");
+
+const logisticsDetailImportance =
+    document.getElementById("logisticsDetailImportance");
+
+
+const logisticsData = {
+    "1": {
+        number: "01",
+        icon: "📦",
+        title: "Proveedores",
+        description:
+            "Los proveedores proporcionan los materiales y componentes necesarios. Redwood coordina su movimiento y conecta la información de los proveedores con las necesidades de transporte y producción.",
+        importance:
+            "Ayuda a que los materiales lleguen cuando se necesitan, evitando retrasos y permitiendo que la producción avance."
+    },
+
+    "2": {
+        number: "02",
+        icon: "🏭",
+        title: "Fabricación",
+        description:
+            "Los paneles solares se fabrican y preparan para su distribución. Redwood conecta el estado de producción con las necesidades de transporte de la siguiente etapa.",
+        importance:
+            "Permite planificar el transporte estratégicamente con base en la producción real, en lugar de administrar fabricación y logística como procesos separados."
+    },
+
+    "3": {
+        number: "03",
+        icon: "🚛",
+        title: "Transporte",
+        description:
+            "La operación puede requerir diferentes transportistas, rutas y opciones de transporte. Redwood coordina estas alternativas dentro de un mismo sistema.",
+        importance:
+            "Permite tomar decisiones considerando costo, tiempo y confiabilidad, en lugar de depender de un solo transportista para toda la operación."
+    },
+
+    "4": {
+        number: "04",
+        icon: "🏢",
+        title: "Almacenamiento",
+        description:
+            "Redwood conecta el almacenamiento con el transporte y la demanda. El inventario puede mantenerse cerca de Monterrey hasta que sea necesario.",
+        importance:
+            "Ayuda a tener paneles disponibles cuando se necesitan sin mover o almacenar inventario en exceso."
+    },
+
+    "5": {
+        number: "05",
+        icon: "📍",
+        title: "Distribución en Monterrey",
+        description:
+            "Redwood coordina el movimiento del inventario hacia el mercado de Monterrey y hasta el punto final de instalación.",
+        importance:
+            "Una mejor coordinación permite entregas más confiables y contribuye a una mejor experiencia para el cliente."
+    }
+};
+
+
+let activeLogisticsStep = "1";
+
+
+function updateLogisticsDetail(stepKey) {
+
+    const step = logisticsData[stepKey];
+
+    if (!step) {
+        return;
+    }
+
+    activeLogisticsStep = stepKey;
+
+    logisticsSteps.forEach(button => {
+
+        const isActive =
+            button.dataset.logisticsStep === stepKey;
+
+        button.classList.toggle(
+            "active",
+            isActive
+        );
+
+        button.setAttribute(
+            "aria-pressed",
+            isActive ? "true" : "false"
+        );
+
+    });
+
+
+    if (logisticsDetailNumber) {
+        logisticsDetailNumber.textContent = step.number;
+    }
+
+    if (logisticsDetailIcon) {
+        logisticsDetailIcon.textContent = step.icon;
+    }
+
+
+    const titleKey =
+        `logistics.step${stepKey}.title`;
+
+    const descriptionKey =
+        `logistics.step${stepKey}.description`;
+
+    const importanceKey =
+        `logistics.step${stepKey}.importance`;
+
+
+    if (logisticsDetailTitle) {
+
+        logisticsDetailTitle.textContent =
+            translations[currentLanguage][titleKey];
+
+        logisticsDetailTitle.dataset.i18n =
+            titleKey;
+    }
+
+
+    if (logisticsDetailDescription) {
+
+        logisticsDetailDescription.textContent =
+            translations[currentLanguage][descriptionKey];
+
+        logisticsDetailDescription.dataset.i18n =
+            descriptionKey;
+    }
+
+
+    if (logisticsDetailImportance) {
+
+        logisticsDetailImportance.textContent =
+            translations[currentLanguage][importanceKey];
+
+        logisticsDetailImportance.dataset.i18n =
+            importanceKey;
+    }
+}
+
+
+logisticsSteps.forEach(button => {
+
+    const activateLogisticsStep = () => {
+
+        const stepKey =
+            button.dataset.logisticsStep;
+
+        if (!stepKey) {
+            return;
+        }
+
+        updateLogisticsDetail(stepKey);
+    };
+
+
+    button.addEventListener(
+        "mouseenter",
+        activateLogisticsStep
+    );
+
+    button.addEventListener(
+        "click",
+        activateLogisticsStep
+    );
+
+    button.addEventListener(
+        "focus",
+        activateLogisticsStep
+    );
+
+});
+
+updateLogisticsDetail(activeLogisticsStep);
 
     /* =====================================================
        INITIALIZATION
