@@ -3432,3 +3432,456 @@ button {
         padding-right: 15px;
     }
 }
+
+/* =====================================================
+   LOGÍSTICA INTEGRADA 4PL
+===================================================== */
+
+.logistics-section {
+    max-width: 1180px;
+    margin: 70px auto 0;
+    padding: 0 24px 70px;
+}
+
+.logistics-heading {
+    max-width: 820px;
+    margin-bottom: 42px;
+}
+
+.logistics-heading > span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #f4b400;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.logistics-heading h3 {
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+}
+
+.logistics-heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+
+/* MAIN WORKFLOW */
+
+.logistics-workflow {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.5fr);
+    gap: 56px;
+    align-items: stretch;
+}
+
+
+/* LEFT SIDE */
+
+.logistics-steps {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-left: 18px;
+}
+
+.logistics-steps::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 3px;
+    width: 2px;
+    background: rgba(244, 180, 0, 0.35);
+}
+
+.logistics-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px 42px 1fr;
+    align-items: center;
+    width: 100%;
+    min-height: 72px;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.035);
+    color: #ffffff;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.logistics-step::before {
+    content: "";
+    position: absolute;
+    left: -21px;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #0b1f33;
+    border-radius: 50%;
+    background: #f4b400;
+}
+
+.logistics-step:hover,
+.logistics-step.active {
+    transform: translateX(6px);
+    border-color: rgba(244, 180, 0, 0.65);
+    background: rgba(244, 180, 0, 0.09);
+}
+
+.logistics-step-icon {
+    font-size: 1.55rem;
+}
+
+.logistics-step-number {
+    color: #f4b400;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.logistics-step-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* RIGHT SIDE: LOGISTICS DETAIL */
+
+.logistics-detail {
+    position: relative;
+    min-height: 100%;
+    padding: 42px 44px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.16);
+}
+
+.logistics-detail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 44px;
+    width: 80px;
+    height: 3px;
+    border-radius: 0 0 4px 4px;
+    background: #f4b400;
+}
+
+.logistics-detail-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.logistics-detail-number {
+    color: rgba(244, 180, 0, 0.35);
+    font-size: 4.6rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+.logistics-detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(244, 180, 0, 0.28);
+    border-radius: 18px;
+    background: rgba(244, 180, 0, 0.08);
+    font-size: 2rem;
+}
+
+.logistics-detail-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #f4b400;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.logistics-detail h4 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+.logistics-detail > p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.logistics-importance {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 16px;
+    margin-top: 32px;
+    padding: 22px;
+    border: 1px solid rgba(244, 180, 0, 0.18);
+    border-radius: 16px;
+    background: rgba(244, 180, 0, 0.07);
+}
+
+.logistics-importance-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f4b400;
+    color: #0b1f33;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.logistics-importance strong {
+    display: block;
+    margin-bottom: 7px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.logistics-importance p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.65;
+}
+
+/* 4PL VALUE SECTION */
+
+.logistics-value {
+    margin-top: 70px;
+    padding-top: 52px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logistics-value-heading {
+    max-width: 800px;
+    margin-bottom: 34px;
+}
+
+.logistics-value-heading > span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #f4b400;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.logistics-value-heading h3 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.15;
+}
+
+.logistics-value-heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.logistics-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.logistics-benefit {
+    min-height: 180px;
+    padding: 26px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.035);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.logistics-benefit:hover {
+    transform: translateY(-5px);
+    border-color: rgba(244, 180, 0, 0.45);
+    background: rgba(244, 180, 0, 0.06);
+}
+
+.logistics-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: rgba(244, 180, 0, 0.12);
+    color: #f4b400;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.logistics-benefit strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.logistics-benefit p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+/* =====================================================
+   LOGÍSTICA 4PL - RESPONSIVE
+===================================================== */
+
+@media (max-width: 980px) {
+
+    .logistics-workflow {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .logistics-steps {
+        max-width: 100%;
+    }
+
+    .logistics-benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logistics-detail {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    .logistics-section {
+        margin-top: 50px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 50px;
+    }
+
+    .logistics-heading {
+        margin-bottom: 32px;
+    }
+
+    .logistics-heading h3 {
+        font-size: 2rem;
+    }
+
+    .logistics-workflow {
+        gap: 30px;
+    }
+
+    .logistics-steps {
+        padding-left: 15px;
+    }
+
+    .logistics-step {
+        grid-template-columns: 34px 36px 1fr;
+        min-height: 66px;
+        padding: 12px 14px;
+    }
+
+    .logistics-step::before {
+        left: -18px;
+    }
+
+    .logistics-step:hover,
+    .logistics-step.active {
+        transform: translateX(3px);
+    }
+
+    .logistics-step-icon {
+        font-size: 1.35rem;
+    }
+
+    .logistics-step-title {
+        font-size: 0.92rem;
+    }
+
+    .logistics-detail {
+        padding: 32px 24px;
+        border-radius: 18px;
+    }
+
+    .logistics-detail::before {
+        left: 24px;
+    }
+
+    .logistics-detail-number {
+        font-size: 3.7rem;
+    }
+
+    .logistics-detail-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 1.7rem;
+    }
+
+    .logistics-detail h4 {
+        font-size: 1.7rem;
+    }
+
+    .logistics-importance {
+        grid-template-columns: 36px 1fr;
+        gap: 13px;
+        padding: 18px;
+    }
+
+    .logistics-importance-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logistics-value {
+        margin-top: 50px;
+        padding-top: 40px;
+    }
+
+    .logistics-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .logistics-benefit {
+        min-height: auto;
+    }
+}
